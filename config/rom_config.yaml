@@ -1,0 +1,104 @@
+# Fossil Fighters Champions (USA) (NDSi Enhanced)
+# Game ID: VDEE (KASEKI2)
+# SHA1: f8263e010974259a955124b5395ec00f25079c35
+
+rom:
+  sha1: f8263e010974259a955124b5395ec00f25079c35
+  title: KASEKI2
+  gamecode: VDEE
+
+arm9:
+  base_address: 0x02004000
+  entry_point: 0x02004800
+  compressed: true
+  compressed_code_end: 0x0207FBE4
+  decompressed_size: 0x0B12E0
+  code_end: 0x020B3AC0
+  bss_start: 0x020B3AC0
+  bss_end: 0x02145300
+  build_info_offset: 0xFB0
+  sdk_version: 0x05047531
+
+autoloads:
+  itcm:
+    base_address: 0x01FF8000
+    code_size: 0x1760
+    bss_size: 0x0
+  dtcm:
+    base_address: 0x02FE0000
+    code_size: 0xA0
+    bss_size: 0x4C0
+
+arm7:
+  base_address: 0x02380000
+  entry_point: 0x02380000
+  size: 0x22B40
+
+overlays:
+  # 19 overlays, all compressed + signed
+  # OV2 = battle overlay (priority target)
+  - id: 0
+    ram: 0x02145300
+    size: 128072
+  - id: 1
+    ram: 0x021719E0
+    size: 101744
+  - id: 2  # BATTLE OVERLAY
+    ram: 0x021959C0
+    size: 192124
+  - id: 3
+    ram: 0x02145300
+    size: 159288
+  - id: 4
+    ram: 0x02145300
+    size: 57696
+  - id: 5
+    ram: 0x021959C0
+    size: 10700
+  - id: 6
+    ram: 0x02199640
+    size: 103344
+  - id: 7
+    ram: 0x02199640
+    size: 123640
+  - id: 8
+    ram: 0x02199640
+    size: 44392
+  - id: 9
+    ram: 0x02199640
+    size: 51932
+  - id: 10
+    ram: 0x021BD180
+    size: 41112
+  - id: 11
+    ram: 0x021BD180
+    size: 43100
+  - id: 12
+    ram: 0x021CBE40
+    size: 24872
+  - id: 13
+    ram: 0x021BC8A0
+    size: 22872
+  - id: 14
+    ram: 0x02145300
+    size: 31724
+  - id: 15
+    ram: 0x021D4FE0
+    size: 6956
+  - id: 16
+    ram: 0x02145300
+    size: 5184
+  - id: 17
+    ram: 0x01FF9760
+    size: 19416
+  - id: 18
+    ram: 0x01FF9760
+    size: 20
+
+notes:
+  - "TWL SDK (DSi-era), 16-byte autoload entries"
+  - "dsd v0.11.0 does NOT support this ROM natively (12-byte autoload expected)"
+  - "OV0/OV3/OV4/OV14/OV16 share RAM 0x02145300 (mutually exclusive)"
+  - "OV6-OV9 share RAM 0x02199640 (mutually exclusive)"
+  - "OV10-OV11 share RAM 0x021BD180 (mutually exclusive)"
+  - "OV17-OV18 share RAM 0x01FF9760 (in ITCM space)"

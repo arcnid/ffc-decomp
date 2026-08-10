@@ -1,0 +1,11 @@
+rom/
+tools/mwccarm/
+tools/bin/
+build/
+.venv/
+__pycache__/
+*.pyc
+*.o
+*.elf
+extract/
+*.nds

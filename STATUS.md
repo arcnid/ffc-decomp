@@ -1,0 +1,247 @@
+# FFC Decomp — Status
+
+## Overview
+
+Matching decompilation of Fossil Fighters Champions (NDS) overlay 2 (battle system).
+Goal: C source that compiles byte-identical to the original ROM via mwccarm.
+
+**OV2 has 1,355 functions. BUILD-VERIFIED: 811 build from C into a SHA1-identical overlay (59.9%, `make verify` → MATCH). 544 asm fallback.**
+
+Two coverage numbers, don't confuse them:
+- **255 build-verified** — compile from a committed .c with a real name, byte-match, wired into `make`. This is the number that counts for release.
+- **~352 ever-matched** — addresses matched at least once in a scratch/template file (`tools/matched_addrs.txt`). Superset of the above; the gap is un-committed/template-drift work.
+
+Build: `make verify` → SHA1 511c76bf...504f87f7 MATCH. Pipeline in docs/BUILD.md.
+Analysis docs: docs/BATTLE_FLOW.md (move/accuracy pipeline), docs/DAMAGE_FORMULA.md (in progress).
+
+4 more have correct logic but register allocation mismatch. 2 have structural mismatches (jump table format, push set).
+
+## Toolchain
+
+- **Compiler**: mwccarm DSi 1.1 build 1018 (Freescale v4.0, Nov 2008)
+- **Flags**: `-c -O4 -proc arm946e -thumb -interworking -enum int -Cpp_exceptions off -i include`
+- **Runner**: wine-stable on macOS, `WINEDEBUG=-all`, `LM_LICENSE_FILE` with Windows-style path
+- **Match tool**: `python3 tools/match_func.py <source.c> <func_addr_hex> [func_size_hex] [--O4p]`
+- **--O4p**: some functions were compiled `-O4,p` (peephole) — changes jump table format to halfword-indexed
+- **OV2 binary**: `extract/arm9_overlays_decompressed/ov002.bin`, base address `0x021959C0`
+
+## Matched Functions by Category
+
+### Individual Battle Logic (prior sessions)
+
+| File | Addr | Size | Description |
+|------|------|------|-------------|
+| accuracy.c | 021A0D1C | 140B | CheckStatusEffectAccuracy |
+| stat_modifier.c | 021A3AC0 | 72B | Stat modifier calc |
+| attack_type6.c | 021A19DC | 68B | Attack type 6 handler |
+| attack_type7.c | 021A1A24 | 86B | Attack type 7 handler |
+| find_by_type.c | 021A1958 | 50B | Find vivosaur by element type |
+| find_avail_type.c | 021A39CC | 68B | Find available vivosaur by type |
+| cond_invert.c | 021A38C4 | 48B | Conditional inversion logic |
+| select_state.c | 021A3908 | 28B | Select battle state |
+| apply_slots.c | 021AA1D8 | 40B | Apply slot effects |
+| collect_stats.c | 021A1D74 | 60B | Collect stats + 1 clone |
+| check_prop7.c | 021A1DB0 | 24B | Check property 7 |
+| has_vivo_check.c | 021A1CF4 | 52B | Iterate team, check vivosaur condition |
+| apply_skill_to_team.c | 021A497C | 64B | Apply skill 6 to all team members |
+| two_call_offset144.c | 021A1324 | 20B | Two calls at offset 0x144 |
+| get_chain308.c | 021A38F4 | 20B | Get chain field 0x308 |
+| get_chain308_safe.c | 021A3A10 | 30B | Safe chain 0x308 getter |
+| battle_state.c | various | — | 5 battle state getters |
+| vivosaur.c | various | — | 7 vivosaur stat getter/setters |
+| has_team.c | 021A18A8 | 18B | Team existence check |
+| has_dead.c | 021A18D0 | 18B | Dead vivosaur check |
+| has_prop.c | 021A198C | 18B | Property check |
+| has_team2.c | 0219C594 | 18B | Team check variant |
+| has_prop2.c | 0219C5C4 | 18B | Property check variant |
+
+### Individual Battle Logic (this session)
+
+| File/Pattern | Addr | Size | Description |
+|------|------|------|-------------|
+| init_from_arg.c | 021A13EC | 24B | Alloc+init with literal 0x1001 |
+| process_pair | 021A389C | 40B | Field80 read + double store to field14 |
+| process_two_fields | 021A4C0C | 48B | Two field80/84 reads + double store |
+| cond_process | 021A4C5C | 36B | Conditional on field80 check |
+| destroy_d050 | 0219D050 | 36B | Destructor with vtable + conditional release |
+
+### Clone Patterns — Set Status Byte
+
+All write `(obj[0xC] & ~0xFF) | 2` to obj+0xC after calling a function.
+
+| Pattern | Count | Notes |
+|---------|-------|-------|
+| set_status_byte.c (fields 0x14, 0x18) | 14 | Standard 2-arg call |
+| set_status_byte3.c (fields 0x14, 0x18, 0x1C) | 5 | 3-arg call |
+| set_status_byte1.c (field 0x14 only) | 4 | 1-arg call |
+| set_status_byte_mixed.c (byte read at 0x1C) | 1 | Third arg is ldrb |
+| set_status_large_off.c (fields 0x80, 0x84) | 1 | Large offset variant |
+| cond_status_call.c (byte flag chooses function) | 4 | If/else on byte at 0x18 |
+| status_reversed (fields 0x18, 0x14) | 1 | Arg order swapped |
+| status_byte_read (ldrb at 0x18) | 1 | Byte + word read |
+| status_four_args (4 fields) | 1 | 0x14/0x18/0x20/0x1C |
+| status_three_args (+ constant 0) | 1 | 0x14/0x18 + movs r2, #0 |
+| status_ptr_args (ptr + words) | 1 | Pointer arg at 0x13 |
+| status_double_check | 1 | Two conditional checks before set |
+| status_check_zero | 1 | Call result == 0 triggers set |
+| status_17C0 (unlabeled clone) | 1 | Same as standard, at 021A17C0 |
+| status_cond_byte (021B8310) | 1 | Conditional byte → bool conversion |
+| status_cond_byte2 (021C4B7C) | 1 | Cond byte + two calls |
+| **Subtotal** | **40** | |
+
+### Clone Patterns — Call+Return Self
+
+| Pattern | Count | Notes |
+|---------|-------|-------|
+| call_return_self.c | 118 | 12B: bl func; return obj |
+| two_call_return_self.c | 58 | 20B: two calls, return obj |
+| two_call_init80.c | 12 | 20-24B: init at +0x80, call, return |
+| three_call_init80.c | 6 | 28B: init at +0x80, two calls, return |
+| two_call_args.c | 6 | 20B: func(a,1); func(a,1,b) |
+| zero_field4_call.c | 4 | 18B: zero field4, call, return |
+| two_call_init10C | 3 | 24B: offset 0x10C |
+| three_call_init10C | 2 | 36B: offset 0x10C |
+| two_call_initC4 | 2 | 20B: offset 0xC4 |
+| three_call_initC4 | 2 | 32B: offset 0xC4 |
+| two_call_init1C | 1 | 20B: offset 0x1C |
+| two_call_initE4 | 1 | 20B: offset 0xE4 |
+| two_call_init18 | 1 | 20B: offset 0x18 |
+| two_call_init110 | 1 | 20B: offset 0x110 |
+| three_call_init110 | 1 | 28B: offset 0x110 |
+| three_call_120_b8 | 1 | 28B: offsets 0x120 + 0xB8 |
+| four_call_120_b8 | 1 | 36B: offsets 0x120 + 0xB8 |
+| **Subtotal** | **220** | |
+
+### Clone Patterns — Init with Vtable
+
+| Addr | Vtable | Size | Notes |
+|------|--------|------|-------|
+| 021A387C | 0x021D51A8 | 32B | Original + param at +0x80 |
+| 021A4174 | (different) | 32B | Clone |
+| 021A43DC | (different) | 32B | Clone |
+| 021A4C3C | (different) | 32B | Clone |
+| 021C1D5C | 0x021D7058 | 32B | Set vtable + field88 call |
+| 021D3448 | 0x021D7928 | 32B | Set vtable + init field14 |
+| 021C8848 | 0x021D780C | 32B | Set vtable + init field14 |
+| 021D3468 | 0x021D7928 | 36B | Set vtable + init field14 + 3 calls |
+| **Subtotal** | | | **8** |
+
+### Clone Patterns — Alloc/Init
+
+| Pattern | Count |
+|---------|-------|
+| alloc_init.c (alloc+zero+init) | 3 |
+| alloc_init3.c | 1 |
+| **Subtotal** | **4** |
+
+### Batch-Matched Trivial Patterns (no individual .c files)
+
+| Pattern | Count | Size |
+|---------|-------|------|
+| Leaf getters (ldr+bx_lr) | 86 | 4-6B |
+| Return-constant (movs+bx_lr) | 36 | 4B |
+| Word setters (str+bx_lr) | 77 | 4-6B |
+| Byte getters (ldrb+bx_lr) | 28+14 | 4-6B |
+| Byte setters (strb+bx_lr) | 17 | 4B |
+| Large-offset word setters | 11 | 6B |
+| Pointer-to-field (adds+bx_lr) | 6 | 4B |
+| Halfword setter | 1 | 4B |
+| Zero-field4-init | 4 | 16B |
+| Call-if-field20 | 2 | 16B |
+| TwoCallWithConst | 6 | 24B |
+| InitWith10C | 3 | 24B |
+| AllocInit84 | 2 | 24B |
+| **Subtotal** | **293** | |
+
+## Known Issues
+
+### Register Allocation Mismatch (4 functions)
+
+Functions with 4+ callee-saved registers (push {r3,r4,r5,r6,r7,lr}) consistently get wrong register assignments. The compiler puts state→r5, i→r4 but the original has state→r6, i→r5. Reordering variable declarations does NOT fix this.
+
+Affected: count_dead.c, find_alive_by_prop.c, count_with_prop.c, apply_skill7_to_team.c
+
+### Structural Mismatches (2 functions)
+
+- **elem_category.c**: Compiler generates halfword-indexed jump table, original uses byte-indexed
+- **hit_zone.c**: Push register set mismatch
+
+### Vtable Dispatch Functions (~20+ functions)
+
+Functions using `blx r2` or `blx r1` (indirect calls through vtable) cannot be matched from C. These are C++ member-function-pointer thunks. The 5x 32B pattern and 6x 52B pattern with vtable dispatch fall into this category.
+
+## What's Left (707 functions, 54%)
+
+### By push type (approximate)
+
+| Push Type | Registers | Count | Matchability |
+|-----------|-----------|-------|-------------|
+| B510 (r4,lr) | 2 | ~200 remaining | HIGH — best target |
+| B508 (r3,lr) | 2 | ~20 remaining | HIGH |
+| B518 (r3,r4,lr) | 2 effective | ~10 remaining | MEDIUM |
+| B538 (r3,r4,r5,lr) | 3 effective | ~150 remaining | MEDIUM — some vtable |
+| B570 (r4,r5,r6,lr) | 3 | ~80 remaining | LOW — register issues |
+| B5F0 (r4-r7,lr) | 4 | ~120 remaining | LOW — register issues |
+| B5F8 (r3-r7,lr) | 5 | ~300 remaining | LOWEST — complex + register |
+
+### Key targets for next session
+
+1. **Remaining B510 functions** (20-80B) — ~200 left, most should match
+2. ~~Main accuracy function~~ **MATCHED 2026-08-02** — src/battle/accuracy_main.c (--O4p)
+3. **Damage formula** — not yet located
+4. **AI decision logic** — large B5F8 functions, likely blocked by register issue
+5. **More set_status variants** — ~8 complex ones skipped this session (bit manipulation, multi-conditional)
+
+## Compiler Notes (mwccarm codegen patterns)
+
+- `do-while` generates TOP-TESTED loop (matches original patterns)
+- `for` generates BOTTOM-TESTED with initial forward branch
+- Switch statements: compiler generates positive-branch pattern
+- Nested if for shared return paths
+- C89 declarations required (all vars before statements in each block)
+- `u32` → unsigned comparisons (bhi/bls), `s32` → signed (bgt/ble)
+- `lsls #31; lsrs #31` = extract bit 0 (generates for `val & 1`)
+- Large offsets (>0xFF): `movs r0, #N; lsls r0, r0, #shift; adds r0, base, r0`
+- Status byte set: `ldr r1, [r4, #12]; movs r0, #255; bics r1, r0; movs r0, #2; orrs r0, r1; str r0, [r4, #12]`
+
+## File Layout
+
+```
+~/ffc-decomp/
+├── extract/arm9_overlays_decompressed/ov002.bin  # Original binary
+├── asm/overlays/ov002/ov002.s                     # Disassembly with function labels
+├── tools/match_func.py                            # Per-function matching tool
+├── include/game/battle.h                          # Common types (u8/u16/u32/s32)
+├── src/battle/*.c                                 # Matched C source files
+├── STATUS.md                                      # This file
+└── update.md                                      # Plain English update for EchoSpaceZ
+```
+
+## Session 2026-08-02 — Parallel Agent Wave 1
+
+8 parallel agents + solo work: **~141 new matches** (603 → ~829, i.e. 46% → 63%).
+
+### Agent batches (81 reported, ~71 new)
+All 8 batches of the remaining B510 (push {r4,lr}) 20-60B functions completed.
+Only 2 failures across 87 targets: 021C1E7C (ldr-pair swap), 021BD488 (bit-test regalloc).
+
+### C++ container library cracked (solo)
+- `vec_at.c` — bounds-checked element access, 5 instances (elem sizes 4/8/0xC/0x30)
+- `vec_alloc_storage.c` — capacity-guarded allocators, 6 instances
+- `vec_pop_n.c` — pop-N destructor loops, 6 instances
+- `dtor_delete_104.c` — inlined `delete` = nested identical null checks
+- Error path idiom: `CallHandler(GetHandler(ErrObj))` chain
+
+### Key discoveries
+1. **`-O4,p` peephole flag** (021A60F0) — explains halfword-indexed jump tables; match_func.py has `--O4p`
+2. **Branch-offset quirk SOLVED** — 021B3B38 clone group (4 functions) matched via multi-function compilation units; elf_extract.py/match_func.py updated to concatenate per-function .text sections
+3. **`delete` idiom** — nested identical null checks produce one cmp + two branches (one dead)
+4. **Parameter reassignment** (`s = (u8*)s + 0x14`) when original mutates a callee-saved register
+5. **`--n` do-while** — subs sets flags, no separate cmp
+6. **Thumb -2 constant**: `movs r3, #8; subs r3, #10`
+
+### Confirmed unmatchable from C (register allocation)
+- 10x clone group (42B, 1-byte struct by value): &flag gets r5 in original, r2 from C — 6 bytes differ, logic confirmed
+- 0219F614 (8-byte struct copy-ctor dance)
+- 4x B518 28B group (subs r1,r1,r1 + phantom frame — C++ temp artifact)
+- 021C1E7C (ldr-pair swap), 021BD488 (bit-test in wrong register)
