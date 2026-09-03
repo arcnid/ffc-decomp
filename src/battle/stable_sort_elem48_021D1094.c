@@ -1,0 +1,35 @@
+/* 0x021D1094, size 0x68, -O4
+ * stable_sort-style wrapper (0x30-byte elements): same shape as 021CC9C8 family
+ * but element size 0x30 (division helper + muls). Temp buf via 021D2774.
+ * NOTE: batch addr 021D1096 is off by 2; real start has B40F struct-arg spill. */
+#include "game/battle.h"
+
+typedef struct { u8 x[0x30]; } T8;
+typedef struct { T8* p; } Iter;
+typedef struct { T8* p; void* own; } DIter;
+typedef struct { T8* data; s32 n; } RawBuf;
+typedef struct { s32 len; s32 cur; T8* ptr; } BufObj;
+
+extern void GetTmpBuf(RawBuf* out, s32 n);
+extern void MergeSort(Iter f, Iter l, DIter b, DIter e, u32* c);
+extern void FreeTmp(void* p);
+
+void StableSort(Iter first, Iter last, u32 comp) {
+    DIter b2;
+    DIter e2;
+    RawBuf raw;
+    BufObj buf;
+    s32 n;
+    n = last.p - first.p;
+    if (n <= 20) n = 0;
+    GetTmpBuf(&raw, n);
+    buf.len = raw.n;
+    buf.cur = 0;
+    buf.ptr = raw.data;
+    e2.p = raw.data + raw.n;
+    e2.own = &buf;
+    b2.p = raw.data;
+    b2.own = &buf;
+    MergeSort(first, last, b2, e2, &comp);
+    FreeTmp(buf.ptr);
+}

@@ -5,7 +5,8 @@
 Matching decompilation of Fossil Fighters Champions (NDS) overlay 2 (battle system).
 Goal: C source that compiles byte-identical to the original ROM via mwccarm.
 
-**OV2 has 1,355 functions. BUILD-VERIFIED: 811 build from C into a SHA1-identical overlay (59.9%, `make verify` → MATCH). 544 asm fallback.**
+**BUILD-VERIFIED: 917/1367 build from C into a SHA1-identical overlay (67.1%, `make verify` → MATCH). 450 asm fallback.**
+(Wave 3, 2026-09-03: +106 functions via ~30 parallel agent batches. See "Session 2026-09-03" at the bottom and docs/PLAYBOOK_WAVE3.md for the discovery log.)
 
 Two coverage numbers, don't confuse them:
 - **255 build-verified** — compile from a committed .c with a real name, byte-match, wired into `make`. This is the number that counts for release.
@@ -245,3 +246,38 @@ Only 2 failures across 87 targets: 021C1E7C (ldr-pair swap), 021BD488 (bit-test 
 - 0219F614 (8-byte struct copy-ctor dance)
 - 4x B518 28B group (subs r1,r1,r1 + phantom frame — C++ temp artifact)
 - 021C1E7C (ldr-pair swap), 021BD488 (bit-test in wrong register)
+
+## Session 2026-09-03 — Parallel Agent Wave 3
+
+811 → 917 build-verified (+106, 59.9% → 67.1%), SHA1 still MATCH. ~30 worker batches
+(12-15 concurrent) over Tier 1 (B510/B508/B518), Tier 2 (B538/B530), Tier 3 (B570/B578),
+plus a Tier 4 (B5F0/B5F8) probe. Hit rate ~90% on real code. All new discoveries
+consolidated in docs/PLAYBOOK_WAVE3.md (read it before wave 4).
+
+### Highlights
+- **Tier 1 fully cleared** (batches 0-13), incl. 172-230B functions with switches/PTMF.
+- **Largest match of the wave**: 021C67C8, 530B 5-state battle sequencer (seq5_state_update).
+- **Phantom-frame cluster CRACKED** (021A51FC/021D2CB4/021D306C): 4-byte struct-by-value
+  frame residue + two-expression-tree self-subtract; plain C at -O4,p. Second mechanism:
+  inlined C++ guard object (021C3FD8, .cpp). Both in the addendum.
+- **Tier 4 verdict: worth scaling** — 6/7 probe matches; register pressure manageable.
+- **stable_sort wrapper family cracked** (5 instances, off-by-2 B40F starts).
+- **Label hygiene findings**: ov002.s has bogus labels (literal-pool data mislabeled as
+  functions, e.g. 021C9558), an ARM9 address table mislabeled as tiny functions
+  (021B9B9C/0219A1CC/02196B00 region), and a growing off-by-2 B40F family (real start =
+  label-2). ~20 corrections recorded in the wave-3 addendum; .s label fixes are future work.
+
+### Confirmed blockers (do not re-derive; details in addendum)
+- **Callee-saved-seed regalloc cluster** (~10 fns incl. the 44B VecDtor six-clone family):
+  mwcc-from-C canonicalization is total; ~35 shapes tried; closest = empty-class Al{} local
+  (.cpp) leaving only the ctor's movs/strb placement + r5 seeding. Needs a novel angle.
+- **021B7ACC rect forwarder**: needs param values in a local slot with no home stores —
+  unreachable per the three struct-local slot rules (documented in addendum).
+- **021A54F0**: phantom-frame + linker long-branch veneer at +0x20 (not compiler output).
+
+### Wave 4 targets
+- ~27 remaining Tier 4 batches (small B5F0/B5F8, high expected hit rate).
+- 213 deferred large functions (>250B B5F0/B5F8, up to 13KB) — the AI/state-machine core.
+- Several killed-mid-flight batch workers left partial work: batches 9, 19-23, 25-33
+  were in progress at shutdown; their targets are unclaimed (grep src/battle before redoing).
+- Fix ov002.s off-by-2/bogus labels so gen_manifest can wire the corrected-start functions.
