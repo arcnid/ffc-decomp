@@ -5,8 +5,8 @@
 Matching decompilation of Fossil Fighters Champions (NDS) overlay 2 (battle system).
 Goal: C source that compiles byte-identical to the original ROM via mwccarm.
 
-**BUILD-VERIFIED: 917/1367 build from C into a SHA1-identical overlay (67.1%, `make verify` → MATCH). 450 asm fallback.**
-(Wave 3, 2026-09-03: +106 functions via ~30 parallel agent batches. See "Session 2026-09-03" at the bottom and docs/PLAYBOOK_WAVE3.md for the discovery log.)
+**BUILD-VERIFIED: 954/1336 build from C into a SHA1-identical overlay (71.4%, `make verify` → MATCH).**
+(Waves 3+4, 2026-09-03..08: 811 → 954 via parallel agent batches + label-deletes cleanup. See session sections at the bottom and docs/PLAYBOOK_WAVE3.md for the discovery log.)
 
 Two coverage numbers, don't confuse them:
 - **255 build-verified** — compile from a committed .c with a real name, byte-match, wired into `make`. This is the number that counts for release.
@@ -281,3 +281,22 @@ consolidated in docs/PLAYBOOK_WAVE3.md (read it before wave 4).
 - Several killed-mid-flight batch workers left partial work: batches 9, 19-23, 25-33
   were in progress at shutdown; their targets are unclaimed (grep src/battle before redoing).
 - Fix ov002.s off-by-2/bogus labels so gen_manifest can wire the corrected-start functions.
+
+## Session 2026-09-07/08 — Wave 4 (partial, credits-limited)
+
+917 → 954 build-verified (67.1% → 71.4%), SHA1 MATCH. Also shipped the label-deletes
+mechanism (config/ov002/label_deletes.txt + gen_manifest support): 40 phantom/bogus/
+pool-split labels purged from the inventory.
+
+Highlights: 021ACEDC phantom-0x10-frame SOLVED (four one-word structs by value);
+hoisted-movs-zero BREAKTHROUGH (C++ named POD value-init reproduces it — first crack
+in the callee-saved-seed blocker family, see addendum "WAVE-4 BREAKTHROUGH");
+volatile strict-order rule; split-variable and inlined-helper regalloc levers;
+all three large Tier-3 functions (021C570C/021C1F4C/021AD55C) matched; Tier 4 ran 7/7.
+
+Wave 5 resume: 14 workers died mid-batch on API errors (batches 1,2,3,6,7,12,13,14 of
+the wave-4 numbering) — their unclaimed targets are simply the remaining manifest asm
+rows; regenerate the target list from manifest.csv (kind=asm), filter documented
+blockers (addendum), grep src/battle for addr/addr-2 first. Blocker cluster should be
+re-attempted FIRST with the C++ value-init breakthrough on members with the spare
+frame word.
