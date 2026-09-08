@@ -39,14 +39,32 @@ MIN_SOLID = 2  # minimum unmasked matching bytes to accept a candidate
 # this floor only guards against fully-relocation-masked garbage.)
 
 
+LABEL_DELETES = os.path.join(ROOT, "config/ov002/label_deletes.txt")
+
+
 def parse_function_inventory():
-    """[(addr, size)] for every func_ label in ov002.s, sorted."""
+    """[(addr, size)] for every func_ label in ov002.s, sorted.
+
+    Labels listed in config/ov002/label_deletes.txt (one 8-hex addr per
+    line, # comments allowed) are dropped: disassembler artifacts —
+    literal-pool data mislabeled as functions, ARM9 address-table words,
+    and stale off-by-2 labels whose real start (label-2, B40F
+    struct-spill prologue) is wired separately via matched_addrs."""
+    deletes = set()
+    if os.path.exists(LABEL_DELETES):
+        with open(LABEL_DELETES) as f:
+            for line in f:
+                line = line.split("#")[0].strip()
+                if line:
+                    deletes.add(int(line, 16))
     addrs = []
     with open(OV2_S) as f:
         for line in f:
             m = re.match(r"func_([0-9A-Fa-f]{8}):", line)
             if m:
-                addrs.append(int(m.group(1), 16))
+                a = int(m.group(1), 16)
+                if a not in deletes:
+                    addrs.append(a)
     addrs.sort()
     size = os.path.getsize(OV2_BIN)
     out = []

@@ -74,3 +74,6 @@ CLOSEST KNOWN APPROACH (do not re-derive): empty class `struct Al {}; Al al;` in
 ## Tooling notes
 - try_variants.py NEAR counts include reloc bytes that match_func.py masks — re-check any NEAR(<=12) with match_func.py directly before restructuring.
 - A conditional branch targeting exactly addr+size = function continues past assumed end (label truncation) — disassemble further.
+
+## Wave 4: pool-split labels (report these!)
+A "function" label can split a REAL function from its own literal pool (e.g. 021B9B9C was 021B9B2C's pool word), making the compiled unit 2-4B bigger than the label gap and blocking manifest wiring even though match_func says MATCH. Tell: match_func MATCHes but the compiled size exceeds the gap by exactly the trailing pool/pad bytes. Report as "POOL-SPLIT: <label> belongs to <function>" — the maintainer deletes the label in config/ov002/label_deletes.txt. Same mechanism for stale off-by-2 labels: matching at the corrected start is enough, the label cleanup is central.
