@@ -6,9 +6,28 @@ The goal is C source that compiles byte-for-byte identical to the original ROM, 
 
 ## Status
 
-**1,077 / 1,364 OV2 functions (79.0%) build-verified** — they compile from committed C into a SHA1-identical overlay. The remaining functions use raw-byte fallback, so `make verify` is green at any coverage level.
+**1,096 / 1,372 OV2 functions (79.9%) build-verified** — they compile from committed C into a SHA1-identical overlay. The remaining functions use raw-byte fallback, so `make verify` is green at any coverage level.
 
-Beyond overlay 2, a full-game pipeline now exists: the entire ROM (arm9 + ITCM + DTCM + all 19 overlays, ~19,400 functions) extracts, delinks, and relinks byte-identical via a locally-patched [ds-decomp](https://github.com/AetiasHax/ds-decomp) toolchain with SDK5/DSi-enhanced cartridge support. Those patches and the full-game tree will land here as they stabilize.
+| Milestone | Status |
+|---|---|
+| Battle overlay (ov002) functions | **79.9%** matched from C |
+| Battle overlay bytes | 27.2% (small functions matched first; the big state machines remain) |
+| Full-ROM extract → relink pipeline | ✅ working — all 22 modules rebuild byte-identical |
+| Full game (~19,400 functions) | battle overlay first; other 21 modules scaffolded, not yet decompiled |
+
+### The goal
+
+A **complete, buildable, open-source Fossil Fighters Champions**: every function in the game as C/C++ that compiles byte-for-byte into the original ROM, in the style of [pret](https://github.com/pret)'s Pokémon decomps and the sm64 project. From there: PC ports, mods, romhacks, bugfixes, and a permanent record of how this game actually works.
+
+The full-game pipeline already exists: the entire ROM (arm9 + ITCM + DTCM + all 19 overlays) extracts, delinks, and relinks byte-identical via a locally-patched [ds-decomp](https://github.com/AetiasHax/ds-decomp) toolchain with SDK5/DSi-enhanced cartridge support (16-byte autoload entries, DSi DTCM layout, animated banner round-trip, and more). Those patches and the full-game tree will land here as they stabilize. A sizable chunk of the main binary is NitroSDK library code that can be bulk-matched from existing community work, so the effective remaining surface is smaller than the raw count.
+
+### How it's being done
+
+This project is decompiled by **AI agent waves**: batches of LLM workers each take a handful of functions, follow the human-curated [playbooks](docs/PLAYBOOK.md) of mwccarm codegen idioms, and iterate against `match_func.py` until the bytes are identical. Hit rates run ~90% on small-to-mid functions. Every discovered compiler idiom feeds back into the playbook, which makes the next wave stronger — the playbooks themselves are one of the most valuable artifacts in the repo for *any* mwccarm-era DS decomp.
+
+### Contributing
+
+**Want to help?** See [CONTRIBUTING.md](CONTRIBUTING.md). Good first contributions: pick any `kind=asm` function from `config/ov002/manifest.csv` under 150 bytes, match it, open a PR. Naming/documentation passes and struct research are just as valuable if assembly isn't your thing.
 
 ```
 original SHA1: 511c76bf315c6cc35db50c8d9a1084e7504f87f7

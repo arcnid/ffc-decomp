@@ -1,0 +1,100 @@
+/* 0x021CE544 (0xC0: fn 0xBA + nop pad + pool reloc 0x020B8E44) — BLOCKED at dsi/1.1.
+   Iterate vector of 0x30B elems under a lock guard; per-elem registry check
+   (0x21CDD0C, 5 args, 5th on stack); erase-or-advance; guard-dtor epilogue.
+   *** BLOCKER: in-loop byte-struct-by-value staging-pointer hoist ***
+   This source matches EVERY byte at -O4,p EXCEPT: mwcc hoists the sp-4 Al
+   staging pointer into a spilled slot (preheader sig: 4668 9005 1F00 9005 =
+   mov r0,sp; str [sp,#0x14]; subs #4; str) + arm reload (9A05) + movs-first
+   dual-base zero strb; the ORIGINAL stages inline per-iteration
+   (AA05 2000 7010 466B 7812 1F1B ... 701A 681A = address-first single-base
+   zero + mov r3,sp; subs r3,#4 in-arm) with frame 0x30 (mine 0x34).
+   ~30 shapes tried: C/C++, volatile (q/w/arg/launder), PadWrap, arm- vs
+   fn-scope w, goto/rotated loops, unnamed Al() temp, const Al& = Al(),
+   static inline wrappers, varargs/unprototyped callee, one-word-struct args
+   (It/Wd); pragmas opt_loop_invariants/common_subs/propagation/
+   strength_reduction/lifetimes/optimization_level/optimize_for_size/
+   exceptions; builds dsi/1.1,1.1p1,1.2,1.2p1, 1.2/base, 1.2/sp4, 2.0/base,
+   2.0/sp2p4 — hoist invariant everywhere. Contrast: drain_ring_queue
+   (021BF880) original HOISTS the same pointer into free callee-saved r6 and
+   matches; here r4-r7 are all loop-resident so dsi/1.1 spills while the
+   original recomputes inline. Everything else (laundered-init guard unfold,
+   while-dup inner loop, erase/advance arms, AC08-pinned guard-dtor epilogue)
+   is byte-identical. */
+#include "game/battle.h"
+
+typedef struct LockSt {
+    u32 f0;
+    void* b;
+    u32 c;
+    u8 d;
+} LockSt;
+
+typedef struct Vec {
+    u8* data;
+    u32 count;
+} Vec;
+
+typedef struct Reg {
+    u32 f0;
+    u32 count;
+    u32 tbloff;
+} Reg;
+
+typedef struct Al {
+    u8 b;
+} Al;
+
+typedef struct AlW {
+    Al a;
+    u8 pad[11];
+} AlW;
+
+extern u32 gLock;
+extern void LockCtor(LockSt* st, u32 v);
+extern Reg* GetReg(void* b, u32 c);
+extern u32 CheckElem(void* a, u32 b, u8* cur, u32 c, void* p);
+extern u8* EraseElem(Vec* v, u8* it, Al al);
+extern void Unlock2(void* b, u32 c);
+extern void Release(void* b);
+extern void LockDtor(LockSt* st);
+
+void IterFunc(void* a, u32 b, u32 c, Vec* d)
+{
+    u32 res;
+    LockSt st;
+    Reg* reg;
+    u8* cur;
+    LockSt* ap;
+
+    LockCtor(&st, gLock);
+    reg = GetReg(st.b, st.c);
+    cur = (u8*)*(void**)d;
+    while (cur != d->data + d->count * 0x30) {
+        u32 i;
+        i = 0;
+        while (i < reg->count) {
+            res = CheckElem(a, b, cur, c, (u8*)reg + *(u32*)(i * 4 + ((u32)reg + reg->tbloff)));
+            if (res == 0) {
+                break;
+            }
+            i++;
+        }
+        if (res == 0) {
+            AlW w;
+            Al* q;
+            q = &w.a;
+            ((volatile Al*)q)->b = 0;
+            cur = EraseElem(d, cur, *q);
+        } else {
+            cur += 0x30;
+        }
+    }
+    ap = &st;
+    if (st.b != 0) {
+        if (ap->d != 0) {
+            Unlock2(ap->b, ap->c);
+        }
+        Release(ap->b);
+    }
+    LockDtor(ap);
+}
