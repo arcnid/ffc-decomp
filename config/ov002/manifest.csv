@@ -239,11 +239,11 @@ address,size,kind,source,function,flags
 021A1324,26,c,src/battle/two_call_offset144.c,TwoCallOffset144,O4
 021A1350,72,c,src/battle/alloc1c_listener_node_021A1350.c,func_021A1350,O4
 021A13B4,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
-021A13D0,26,c,src/battle/alloc_init.c,AllocAndInit,O4
+021A13D0,26,c,src/battle/alloc_call2.c,AllocCall2,O4
 021A13EC,24,c,src/battle/init_from_arg.c,InitFromArg,O4
 021A1404,316,asm,,,
 021A1540,28,c,src/battle/set_status_byte3.c,SetStatusByte3,O4
-021A155C,30,c,src/battle/alloc_init3.c,AllocAndInit3,O4
+021A155C,30,c,src/battle/alloc20_cond_init3.c,Func155C,O4
 021A157C,84,c,src/battle/alloc_init_157c.c,Init157C,O4
 021A15D0,96,c,src/battle/alloc20_loop3_init_021A15D0.c,Func_021A15D0,O4
 021A1630,164,c,src/battle/factory_object_0219A938.c,func,O4
@@ -251,13 +251,13 @@ address,size,kind,source,function,flags
 021A1788,28,c,src/battle/add_offset_call_1788.c,Func1788,O4
 021A17C0,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
 021A17F8,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
-021A1814,26,c,src/battle/alloc_init.c,AllocAndInit,O4
+021A1814,26,c,src/battle/alloc_call2.c,AllocCall2,O4
 021A1868,62,c,src/battle/vec_find_by_id_11c.c,Find,O4
 021A18A8,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
 021A18BC,8,c,src/battle/battle_state.c,BattleState_GetTeamSize,O4
 021A18C4,12,c,src/battle/battle_state.c,BattleState_GetVivosaur,O4
 021A18D0,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
-021A18E4,50,c,src/battle/f_021A18E4.c,Count_021A18E4,O4p
+021A18E4,50,c,src/battle/count_dead.c,CountDeadVivosaurs,O4p
 021A1918,64,c,src/battle/find_alive_by_prop.c,FindAliveByProperty,O4p
 021A1958,50,c,src/battle/find_by_type.c,FindVivoByType,O4
 021A198C,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
@@ -403,7 +403,7 @@ address,size,kind,source,function,flags
 021A9390,204,c,src/battle/event_checks_sendmsgs_021a9390.c,func_021A9390,O4p
 021A945C,160,asm,,,
 021A94FC,252,c,src/battle/battle_log_notify_flags_021a94fc.c,Func_021A94FC,O4
-021A95F8,596,asm,,,
+021A95F8,524,c,src/battle/build_event_queue_pairctor_021a95f8.c,func_021A95F8,O4
 021A9804,72,c,src/battle/alloc94_ctor_pair_word_021A9804.c,Ctor_021A9804,O4
 021A984C,304,c,src/battle/battle_apply_move_effect.c,func,O4p
 021A997C,804,asm,,,
@@ -927,7 +927,7 @@ address,size,kind,source,function,flags
 021BC6B8,18,c,src/battle/virt_call1_null_80_s10.c,CallVirtN80_10,O4
 021BC6CC,18,c,src/battle/virt_call1_null_80_s11.c,CallVirtN80_11,O4
 021BC6E0,184,c,src/battle/virt_notify_switch_mode_events_021BC6E0.c,Main,O4
-021BC798,26,c,src/battle/alloc_init.c,AllocAndInit,O4
+021BC798,26,c,src/battle/alloc_call2.c,AllocCall2,O4
 021BC7B4,22,c,src/battle/alloc18_init_self_021BC7B4.c,f_021BC7B4,O4
 021BC7CC,26,c,src/battle/bool_field80_and_sub_bc7cc.c,FuncBC7CC,O4
 021BC7E8,20,c,src/battle/cond_tail_field80_bc7e8.c,FuncBC7E8,O4
@@ -1223,7 +1223,7 @@ address,size,kind,source,function,flags
 021C8F98,88,c,src/battle/ctor_elemloop_021C8F40.c,Ctor,O4
 021C8FF0,4,c,src/battle/elem4_array_ctor_unit_021c90a0.cpp,f_021C9164,O4
 021C8FFC,4,c,src/battle/elem_array_accessors_021D32F8.c,Get2_32F8,O4
-021C9000,4,c,src/battle/elem_array_accessors_021D32F8.c,Get3_32F8,O4
+021C9000,4,c,src/battle/dtor2_strbuf_accessors_021C2904.c,GetC_021C291C,O4
 021C9054,24,c,src/battle/init_cb_3_8_021C9054.c,f_021C9054,O4
 021C906C,24,c,src/battle/init_cb_3_8_021C9054.c,f_021C9054,O4
 021C9084,28,c,src/battle/ctor_zero2_30.c,sub_21C9084,O4
@@ -1242,8 +1242,8 @@ address,size,kind,source,function,flags
 021C939C,178,c,src/battle/alloc70_params_byval_ctor_021C939C.cpp,func_021C939C,O4p
 021C9450,192,c,src/battle/copy_ctor_9450.c,CopyCtor_9450,O4
 021C9510,40,c,src/battle/alloc_cond_init.c,AllocCondInit,O4
-021C9538,36,c,src/battle/alloc_store2_021C9538.c,sub_021C9538,O4
-021C955C,48,c,src/battle/allocb4_make_forward_021C955C.c,Make_021C955C,O4
+021C9538,36,c,src/battle/alloc10_vtable_fnptr_021C9538.c,Func9538,O4
+021C955C,48,c,src/battle/alloc_b4_pair_ctor.c,sub_21C955C,O4
 021C958C,48,c,src/battle/alloc178_ctor6_021C958C.c,sub_21C958C,O4p
 021C95BC,260,c,src/battle/ctor_vtbl2_fieldinit_021C95BC.c,Ctor_021C95BC,O4
 021C96C0,30,c,src/battle/ctor_vtbl2_fieldinit_021C95BC.c,Helper_021C96C0,O4
