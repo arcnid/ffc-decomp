@@ -318,3 +318,20 @@ via mwldarm dsi/1.6sp2, all pass `dsd check modules`, ROM byte-identical in NTR 
 Real inventory: ~19.4k functions game-wide (arm9 8163, overlays 11242); ov002 = 1179
 real functions. Next: port src/battle matches into dsd tree as C TUs; dsd sig for
 NitroSDK bulk-match; rounds for >244B tiers.
+
+## Session close 2026-10-12 — out of credits, wrapping up
+
+954 -> 1097 build-verified (71.4% -> 79.9%) across wave 5 rounds 1-4. Round 1
+mostly completed (15/20 + 12/20 earlier harvests). Rounds 2, 3, and 4 ALL died
+at 0 results to usage-credit exhaustion -- none of their targets ran, no
+matches lost (nothing was saved to lose). Switched to Sonnet 5 default model
+after credits ran out.
+
+Next session: re-dispatch three full untouched tiers from scratch:
+- round 2: 244-596B tier, 22 targets (never ran) — workflow run wf_bb1875fc-bc8
+- round 3: 601-1200B tier, 48 targets (never ran) — workflow run wf_b4df079f-f2c
+- round 4: >1200B tier, 40 targets incl. the 13KB mega state machine at
+  021D4640 (never ran) — workflow run wf_b796192d-b8b
+All three can be resumed via Workflow({scriptPath: ..., resumeFromRunId: ...})
+with the same args as logged in each run's summary above, or just re-dispatched
+fresh since nothing cached successfully.

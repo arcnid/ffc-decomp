@@ -125,7 +125,7 @@ address,size,kind,source,function,flags
 0219C3FC,408,asm,,,
 0219C594,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
 0219C5C4,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
-0219C5D8,50,c,src/battle/find_by_type.c,FindVivoByType,O4
+0219C5D8,50,c,src/battle/linear_search_0219C5D8.c,f,O4
 0219C60C,70,c,src/battle/jtable_0219C60C.c,Func_0219C60C,O4p
 0219C654,88,c,src/battle/count_match_type.c,CountMatchType_219C654,O4p
 0219C6AC,100,c,src/battle/classify_219c6ac.c,Classify_219C6AC,O4
@@ -259,7 +259,7 @@ address,size,kind,source,function,flags
 021A18D0,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
 021A18E4,50,c,src/battle/f_021A18E4.c,Count_021A18E4,O4p
 021A1918,64,c,src/battle/find_alive_by_prop.c,FindAliveByProperty,O4p
-021A1958,50,c,src/battle/find_by_type.c,FindVivoByType,O4
+021A1958,50,c,src/battle/linear_search_0219C5D8.c,f,O4
 021A198C,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
 021A19A0,58,c,src/battle/count_matches_021A19A0.c,f,O4p
 021A19DC,70,c,src/battle/attack_type6.c,FindAttackType6Vivo,O4
@@ -281,7 +281,7 @@ address,size,kind,source,function,flags
 021A2E9C,120,c,src/battle/init_widget_copyparams_021A2E9C.c,InitWidgetCopyParams,O4
 021A2F14,164,c,src/battle/factory_object_0219A938.c,func,O4
 021A2FB8,164,c,src/battle/factory_object_0219A938.c,func,O4
-021A305C,64,c,src/battle/f_021A305C.c,Dtor_021A305C,O4
+021A305C,64,c,src/battle/dtor_chain_190.c,Dtor_021A305C,O4
 021A309C,48,c,src/battle/read_pack_inc_144.c,Func_021A309C,O4
 021A30CC,1424,asm,,,
 021A365C,460,asm,,,
@@ -302,11 +302,11 @@ address,size,kind,source,function,flags
 021A3BD4,972,asm,,,
 021A3F04,72,c,src/battle/alloc94_ctor_pair_byte_021B0A50.c,Ctor_021B0A50,O4
 021A3F4C,72,c,src/battle/alloc94_ctor_pair_byte_021B0A50.c,Ctor_021B0A50,O4
-021A3FA0,22,c,src/battle/spawn_alloc84_021A41EC.c,f_021A41EC,O4
+021A3FA0,22,c,src/battle/spawn_alloc84_021A3FA0.c,f_021A3FA0,O4
 021A3FB8,444,asm,,,
 021A4174,32,c,src/battle/ctor_vtable_field80_021A4174.c,Ctor4174,O4
 021A4194,88,c,src/battle/f_021A4194.c,Func_021A4194,O4
-021A41EC,22,c,src/battle/spawn_alloc84_021A41EC.c,f_021A41EC,O4
+021A41EC,22,c,src/battle/spawn_alloc84_021A3FA0.c,f_021A3FA0,O4
 021A4204,134,c,src/battle/action_allowed_switch_4204.c,Func4204,O4p
 021A428C,212,c,src/battle/team_scan_apply_threshold_021A428C.c,f,O4p
 021A4360,124,c,src/battle/factory_a4360.c,f_021A4360,O4p
@@ -490,7 +490,7 @@ address,size,kind,source,function,flags
 021AD218,28,c,src/battle/set_status_byte_mixed.c,SetStatusByteMixed,O4
 021AD234,24,c,src/battle/two_call_args.c,TwoCallArgs,O4
 021AD250,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
-021AD25C,58,c,src/battle/f_021AD25C.c,Dtor_021AD25C,O4
+021AD25C,58,c,src/battle/dtor_chain_190_nofree.c,Dtor_021AD25C,O4
 021AD29C,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021AD2AC,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021AD2BC,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
@@ -1302,6 +1302,7 @@ address,size,kind,source,function,flags
 021CF62E,1392,asm,,,
 021CFB9E,924,asm,,,
 021CFF3A,292,asm,,,
+021D005C,106,c,src/battle/insertion_sort_s32desc_021CC8C8.c,InsSort_021CC8C8,O4p
 021D005E,296,asm,,,
 021D0120,100,c,src/battle/stable_sort_elem8_021CC9C8.c,StableSort,O4
 021D0186,376,asm,,,

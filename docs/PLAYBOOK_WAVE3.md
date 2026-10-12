@@ -99,3 +99,27 @@ CLOSEST KNOWN APPROACH (older, superseded by the above): empty class `struct Al 
 
 ## Wave 4: pool-split labels (report these!)
 A "function" label can split a REAL function from its own literal pool (e.g. 021B9B9C was 021B9B2C's pool word), making the compiled unit 2-4B bigger than the label gap and blocking manifest wiring even though match_func says MATCH. Tell: match_func MATCHes but the compiled size exceeds the gap by exactly the trailing pool/pad bytes. Report as "POOL-SPLIT: <label> belongs to <function>" — the maintainer deletes the label in config/ov002/label_deletes.txt. Same mechanism for stale off-by-2 labels: matching at the corrected start is enough, the label cleanup is central.
+
+## Wave-5 additions
+- **addrOf-launder for sret temps**: `static inline const T* addrOf(const T& r) { return (const T*)(const void*)&r; }` wrapped around a struct-returning virtual call INSIDE another inline helper's arg list → sret temp with no extra copy + base-reg addressing + by-value Pair copy before the blx. (sret into a named local always emits temp+stmia at -O4,p.)
+- **Inlining refinement**: by-value-8B-struct static inline helpers DO inline at -O4,p in .cpp; the "never inlines" rule is plain -O4 only.
+- **By-value arg-copy elision tell**: the inline callee's dead copy slots only materialize when a function call occurs inside the same argument list; all-pre-evaluated args elide the copy (changes push set).
+- Blocker family +1: 021B7FCC (r4-seed variant; best = 16B pure-permutation tail diff; source in worker report).
+- **Byte-struct push_back tail IS matchable** (wave-2 verdict overturned): `Al arr[2]; Al* q = arr+1; ((volatile Al*)q)->b = 0; F(v, &val, *q);` at -O4,p, when the zero is in-block (not hoisted).
+- **Address-first strb = pointer-local shape**: `Al* q = &w.a; q->b = 0; F(..., *q);` emits add/movs/strb ADDRESS-FIRST (plain member access canonicalizes movs-first; must be `&struct.field` or `arr+1`, not a bare array base). No volatile needed.
+- **u8 params stop truncation hoisting**: declare a byte param `u8` (not u32) to avoid hoisted lsls/lsrs #24 in loops.
+- **Rotated flag-loop (std::find shape)** needs explicit gotos: `goto test; inc: it++; test: go=0; if (it!=end){if(*it!=p) go=1;} if (go) goto inc;` — while/for forms collapse the flag or lose rotation; declare `end` before `it`.
+- **Plain C++ virtual call needs .cpp**: `((O*)s)->v4();` with a dummy virtual struct gives the r0-first vtable load; C fn-pointer arrays load via the object's register.
+- **PadWrap bottom-anchored**: `struct { Al a; u8 pad[N]; }` — unused TRAILING fields survive like leading ones.
+
+## VecDtor/callee-saved-seed cluster: CLOSED for source shapes (wave-5 verdict)
+Order half SOLVED (pointer-local `Al* q = &w.a; q->b = 0;` gives address-first). Remaining 6-byte diff = ONE allocator decision (&a → r5 callee-saved vs r2 scratch), invariant across ~65 source shapes, all pragma combos, and EVERY mwcc build in tools/ (1.1 through 2.0, all patches). Frontier source preserved in the wave-5 specialist report. HYPOTHESIS: the byte-identical clone bodies (signature AD00 2200 702A 466B 782A) are template instantiations from a PREBUILT static library compiled by an mwcc build/config not in tools/ — next step is SDK/middleware lib archaeology, NOT more source shapes. Do not attack these addrs again: 0219F8B8/0219F8FC/0219FE80/0219FEE0/021A50C8/021C31E0/021AD494/021D2B50/021C2F9C/021D30BC/021CB298.
+Corrections to earlier notes: (a) de-opt pragmas ARE viable in single-function TUs (`#pragma opt_propagation off` works; wave-3 "global-only" note was wrong); (b) the wave-4 named-value-init movs-hoist lever does NOT apply to 1-byte structs at dsi 1.1 (emits __memclear BL) — it is size/context dependent; (c) mwcc keeps total push count EVEN (8-byte sp): 1 local word + r4+lr → TWO low-reg fillers (B51C); using r5 instead → B538 with one filler.
+- **Shared-zero local defeats the zero-hoist blocker** when the function has OTHER zero uses: `u32 zv = 0;` used for both (e.g. a fill loop AND the grow-arm byte store) lives in a callee-saved reg and mwcc reuses it instead of rematerializing. The blocker only bites when the Al zero is the SOLE zero (021C2B40 stays blocked; family: 021CA134/021C8710/021D2BDC).
+- **`const Al& al = Al();` const-ref-bound temp**: new near-lever for the byte-struct staging — single-slot staging + correct scratch reg + dual-base scheduling; remaining delta is the 2-instruction staging placement.
+- **Descending computed stores, lighter variant**: volatile on the two LOADS alone (stores plain) suffices when values are computed into locals first.
+- **Float phantom frames**: `push {r3,...}+sub sp,#4` in soft-float code = final float→fixed helper modeled as `extern s32 FtoI(FW x)` with `FW = {float f}` assigned in both branches. Unary FP minus = `0.0f - x`; float helper calls never CSE — repeat the expression per branch.
+- **Struct-returning virtual must be an INLINE argument** (`F2(..., obj->v4(), ...)`) — a named temp adds an unelided sret copy; real C++ virtuals bind this→r1 with no mov.
+- **Load-all-then-store-all copies: write loads in REVERSE store order** under high register pressure (7+ live temps).
+- **u16 copy-loop**: u32 counter (s32 gives cmp/bgt not subs/bne); body = temp + separate increments; counter declared first pins its reg; dst declared before src with src assigned first.
+- **Pointer-select must be a ternary** (`sel = (a<b) ? &a : &b;`) — if-form swaps r1/r2. Call result compared via a local for result-left cmp.
