@@ -58,7 +58,7 @@ address,size,kind,source,function,flags
 02198D48,32,c,src/battle/cond_load_02198D48.c,sub_02198D48,O4
 02198DB8,36,c,src/battle/check_pair_e8.c,f_02198DB8,O4
 02198E24,36,c,src/battle/alloc_init_vtable_14.c,AllocInit60A8,O4
-02198E68,24,c,src/battle/call_field14_status2.c,CallField14Status2,O4
+02198E68,24,c,src/battle/set_status_byte1.c,SetStatusByte1,O4
 02198E84,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 02198EAC,100,c,src/battle/ctor_subobj80_null_upcast_02198EAC.c,Func_02198EAC,O4
 02198F28,76,c,src/battle/ctor_subobj80_02198F28.c,Func_02198F28,O4
@@ -99,7 +99,7 @@ address,size,kind,source,function,flags
 0219AEC4,232,c,src/battle/scan_type12_build_tasks_0219aec4.c,func_0219AEC4,O4p
 0219AFAC,18,c,src/battle/two_call_return_self.c,TwoCallReturnSelf,O4
 0219AFF4,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
-0219B000,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
+0219B000,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
 0219B01C,50,c,src/battle/ptmf_call_status.cpp,_Z8CallPtmfP1S,O4
 0219B050,20,c,src/battle/two_call_init80.c,TwoCallInit80,O4
 0219B064,26,c,src/battle/three_call_init80.c,ThreeCallInit80,O4
@@ -125,7 +125,7 @@ address,size,kind,source,function,flags
 0219C3FC,408,asm,,,
 0219C594,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
 0219C5C4,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
-0219C5D8,50,c,src/battle/linear_search_0219C5D8.c,f,O4
+0219C5D8,50,c,src/battle/find_by_type.c,FindVivoByType,O4
 0219C60C,70,c,src/battle/jtable_0219C60C.c,Func_0219C60C,O4p
 0219C654,88,c,src/battle/count_match_type.c,CountMatchType_219C654,O4p
 0219C6AC,100,c,src/battle/classify_219c6ac.c,Classify_219C6AC,O4
@@ -224,7 +224,7 @@ address,size,kind,source,function,flags
 021A0184,72,c,src/battle/ctor_init_021A0184.c,Func_021A0184,O4
 021A01CC,2752,asm,,,
 021A0C8C,88,c,src/battle/f_021A0C8C.c,Func_021A0C8C,O4
-021A0D00,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
+021A0D00,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
 021A0D1C,140,c,src/battle/accuracy.c,CheckStatusEffectAccuracy,O4
 021A0DA8,176,c,src/battle/state_switch_strtmp_fxdiv_021A0DA8.c,Main,O4p
 021A0E58,380,asm,,,
@@ -238,7 +238,7 @@ address,size,kind,source,function,flags
 021A12D8,74,c,src/battle/f_021A12D8.c,Func_021A12D8,O4
 021A1324,26,c,src/battle/two_call_offset144.c,TwoCallOffset144,O4
 021A1350,72,c,src/battle/alloc1c_listener_node_021A1350.c,func_021A1350,O4
-021A13B4,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
+021A13B4,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
 021A13D0,26,c,src/battle/alloc_call2.c,AllocCall2,O4
 021A13EC,24,c,src/battle/init_from_arg.c,InitFromArg,O4
 021A1404,316,asm,,,
@@ -249,8 +249,8 @@ address,size,kind,source,function,flags
 021A1630,164,c,src/battle/factory_object_0219A938.c,func,O4
 021A1714,116,c,src/battle/clamp_counter_setval_021A1714.c,ClampCounterSetVal,O4p
 021A1788,28,c,src/battle/add_offset_call_1788.c,Func1788,O4
-021A17C0,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
-021A17F8,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
+021A17C0,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
+021A17F8,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
 021A1814,26,c,src/battle/alloc_call2.c,AllocCall2,O4
 021A1868,62,c,src/battle/vec_find_by_id_11c.c,Find,O4
 021A18A8,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
@@ -259,7 +259,7 @@ address,size,kind,source,function,flags
 021A18D0,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
 021A18E4,50,c,src/battle/f_021A18E4.c,Count_021A18E4,O4p
 021A1918,64,c,src/battle/find_alive_by_prop.c,FindAliveByProperty,O4p
-021A1958,50,c,src/battle/linear_search_0219C5D8.c,f,O4
+021A1958,50,c,src/battle/find_by_type.c,FindVivoByType,O4
 021A198C,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
 021A19A0,58,c,src/battle/count_matches_021A19A0.c,f,O4p
 021A19DC,70,c,src/battle/attack_type6.c,FindAttackType6Vivo,O4
@@ -438,7 +438,7 @@ address,size,kind,source,function,flags
 021AAB64,356,asm,,,
 021AACC8,28,c,src/battle/status_three_args_zero.c,StatusThreeArgsZero,O4
 021AAD10,112,c,src/battle/notify_alloc_21aad10.c,NotifyAlloc_21AAD10,O4
-021AAD94,24,c,src/battle/call_field14_status2.c,CallField14Status2,O4
+021AAD94,24,c,src/battle/set_status_byte1.c,SetStatusByte1,O4
 021AADAC,468,asm,,,
 021AAF80,28,c,src/battle/cond_call_global_aaf80.c,FuncAAF80,O4
 021AAF9C,34,c,src/battle/bounds_dispatch_af9c.c,FuncAF9C,O4
@@ -465,7 +465,7 @@ address,size,kind,source,function,flags
 021AC5D4,44,c,src/battle/diff_via_out_structs.c,Func_021AC5D4,O4
 021AC600,80,c,src/battle/combine_wrapped_values_021AC600.c,func_021AC600,O4p
 021AC650,336,asm,,,
-021AC7A0,312,asm,,,
+021AC7A0,312,c,src/battle/strtmp_lerp_divswitch_021AC7A0.c,func_021AC7A0,O4p
 021AC8D8,26,c,src/battle/combine_two_getvals_c8d8.c,Func8D8,O4
 021AC8F4,104,c,src/battle/table_cmp_ac8f4.c,f,O4p
 021AC95C,124,c,src/battle/affinity_cmp_lookup_classify_021AC95C.c,F_021AC95C,O4p
@@ -561,7 +561,7 @@ address,size,kind,source,function,flags
 021B116C,60,c,src/battle/double_check_lookup_116c.c,Func116C,O4
 021B11A8,88,c,src/battle/step_update_21b11a8.c,StepUpdate_21B11A8,O4p
 021B1200,272,asm,,,
-021B1310,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
+021B1310,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
 021B132C,572,asm,,,
 021B1568,28,c,src/battle/set_status_byte3.c,SetStatusByte3,O4
 021B1584,42,c,src/battle/virt2_status_1b1584.cpp,_Z1fP1S,O4
@@ -628,7 +628,7 @@ address,size,kind,source,function,flags
 021B340C,180,c,src/battle/task_batch_measure_pair_021B340C.c,func_021B340C,O4
 021B34C0,308,asm,,,
 021B35F4,180,c,src/battle/task_batch_measure_neg_pair_021B35F4.c,func_021B35F4,O4
-021B36A8,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
+021B36A8,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
 021B36C4,28,c,src/battle/vtable_store_2call.c,VtableStore2Call,O4
 021B36E0,32,c,src/battle/vtable_store_3call.c,VtableStore3Call,O4
 021B3700,34,c,src/battle/ptmf_call_obj_38.cpp,_Z11CallPtmfObjP2SB,O4
@@ -726,7 +726,7 @@ address,size,kind,source,function,flags
 021B6538,1432,asm,,,
 021B6AD0,876,asm,,,
 021B6E3C,56,c,src/battle/field_read_cond_store_154.c,Func6E3C,O4
-021B6E74,92,c,src/battle/strlen_loop_b6e74.c,func_6e74,O4
+021B6E74,92,c,src/battle/bitfield_gate_loop_021B6E74.c,Func_021B6E74,O4
 021B6ED0,428,asm,,,
 021B707C,364,asm,,,
 021B71E8,1492,asm,,,
@@ -753,9 +753,9 @@ address,size,kind,source,function,flags
 021B7D6E,166,asm,,,
 021B7E14,40,c,src/battle/alloc1c_vtbl_owner_byte_021B7E14.c,New_021B7E14,O4
 021B7E3C,36,c,src/battle/cond_status_call.c,ConditionalStatusCall,O4
-021B7E60,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
-021B7E7C,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
-021B7E98,24,c,src/battle/call_field14_status2.c,CallField14Status2,O4
+021B7E60,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
+021B7E7C,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
+021B7E98,24,c,src/battle/set_status_byte1.c,SetStatusByte1,O4
 021B7EB0,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021B7EBC,18,c,src/battle/two_call_return_self.c,TwoCallReturnSelf,O4
 021B7ED0,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
@@ -911,7 +911,7 @@ address,size,kind,source,function,flags
 021BC13C,32,c,src/battle/alloc14_vtable_bc13c.c,FuncBC13C,O4
 021BC15C,228,asm,,,
 021BC240,404,asm,,,
-021BC3D4,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
+021BC3D4,26,c,src/battle/call_2fields_rev_status2.c,Call2FieldsRevStatus2,O4
 021BC3F0,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021BC3FC,18,c,src/battle/two_call_return_self.c,TwoCallReturnSelf,O4
 021BC414,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
@@ -920,7 +920,7 @@ address,size,kind,source,function,flags
 021BC440,60,c,src/battle/table_lookup_key.c,sub_21BC440,O4p
 021BC47C,32,c,src/battle/index_calc_x12.c,FuncC47C,O4
 021BC4B0,124,c,src/battle/status_switch_scale_bc4b0.c,F,O4
-021BC548,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
+021BC548,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
 021BC564,80,c,src/battle/f_021BC564.c,Func_021BC564,O4
 021BC5B4,190,c,src/battle/handle_rebuild_virt_pairfwd_021bc5b4.c,f,O4
 021BC674,46,c,src/battle/handle_rebuild_virt_pairfwd_021bc5b4.c,g,O4
@@ -1036,10 +1036,10 @@ address,size,kind,source,function,flags
 021C2154,48,c,src/battle/alloc24_vtbl_clearbyte_4ptr_021C2154.c,sub_21C2154,O4
 021C2184,40,c,src/battle/alloc1c_init_flagclear.c,Func2184,O4
 021C21AC,40,c,src/battle/alloc_init2_args.c,AllocInit2Args,O4
-021C21D4,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
+021C21D4,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
 021C21F0,36,c,src/battle/cond_status_call.c,ConditionalStatusCall,O4
 021C2214,30,c,src/battle/set_status_four_args.c,SetStatusFourArgs,O4
-021C2234,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
+021C2234,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
 021C2250,30,c,src/battle/set_status_ptr_args.c,SetStatusPtrArgs,O4
 021C2274,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021C2284,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
@@ -1124,7 +1124,7 @@ address,size,kind,source,function,flags
 021C5634,34,c,src/battle/virt_slot10_x2_5634.c,F,O4
 021C5658,44,c,src/battle/sound_virt_1c5658.cpp,_Z1fP1S,O4
 021C5684,84,c,src/battle/alloc8c_ctor_021C5684.c,Func_021C5684,O4
-021C56F4,24,c,src/battle/call_field14_status2.c,CallField14Status2,O4
+021C56F4,24,c,src/battle/set_status_byte1.c,SetStatusByte1,O4
 021C570C,276,c,src/battle/input_poll_sfx_counter_021C570C.c,func_021C570C,O4p
 021C5820,292,asm,,,
 021C5944,20,c,src/battle/two_call_init80.c,TwoCallInit80,O4
@@ -1142,13 +1142,13 @@ address,size,kind,source,function,flags
 021C6118,164,c,src/battle/factory_object_p80_0219AA1C.c,func,O4
 021C61BC,164,c,src/battle/factory_object_p80_0219AA1C.c,func,O4
 021C6278,352,asm,,,
-021C63D8,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
+021C63D8,26,c,src/battle/set_status_byte.c,SetStatusByte,O4
 021C63F4,50,c,src/battle/ptmf_call_status.cpp,_Z8CallPtmfP1S,O4
 021C642C,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021C6438,18,c,src/battle/two_call_return_self.c,TwoCallReturnSelf,O4
 021C644C,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
-021C6458,276,c,src/battle/ctor_rec94_tick_021C6458.c,Ctor_021C6458,O4
-021C656C,276,c,src/battle/ctor_rec94_tick_021C6458.c,Ctor_021C6458,O4
+021C6458,276,c,src/battle/ctor_rec94_tick_021C656C.c,Ctor_021C656C,O4
+021C656C,276,c,src/battle/ctor_rec94_tick_021C656C.c,Ctor_021C656C,O4
 021C6680,68,c,src/battle/dtor_std_021C6680.c,Func_021C6680,O4
 021C66C4,72,c,src/battle/dtor_free_021C66C4.c,Func_021C66C4,O4
 021C670C,68,c,src/battle/dtor_std_021C6680.c,Func_021C6680,O4
@@ -1224,7 +1224,7 @@ address,size,kind,source,function,flags
 021C8F98,88,c,src/battle/ctor_elemloop_021C8F40.c,Ctor,O4
 021C8FF0,4,c,src/battle/elem4_array_ctor_unit_021c90a0.cpp,f_021C9164,O4
 021C8FFC,4,c,src/battle/elem_array_accessors_021D32F8.c,Get2_32F8,O4
-021C9000,4,c,src/battle/dtor2_strbuf_accessors_021C2904.c,GetC_021C291C,O4
+021C9000,4,c,src/battle/elem_array_accessors_021D32F8.c,Get3_32F8,O4
 021C9054,24,c,src/battle/init_cb_3_8_021C9054.c,f_021C9054,O4
 021C906C,24,c,src/battle/init_cb_3_8_021C9054.c,f_021C9054,O4
 021C9084,28,c,src/battle/ctor_zero2_30.c,sub_21C9084,O4
