@@ -257,7 +257,7 @@ address,size,kind,source,function,flags
 021A18BC,8,c,src/battle/battle_state.c,BattleState_GetTeamSize,O4
 021A18C4,12,c,src/battle/battle_state.c,BattleState_GetVivosaur,O4
 021A18D0,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
-021A18E4,50,c,src/battle/count_dead.c,CountDeadVivosaurs,O4p
+021A18E4,50,c,src/battle/f_021A18E4.c,Count_021A18E4,O4p
 021A1918,64,c,src/battle/find_alive_by_prop.c,FindAliveByProperty,O4p
 021A1958,50,c,src/battle/find_by_type.c,FindVivoByType,O4
 021A198C,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
@@ -782,7 +782,7 @@ address,size,kind,source,function,flags
 021B836C,272,asm,,,
 021B847C,32,c,src/battle/three_call_offset120.c,ThreeCallOffset120,O4
 021B849C,38,c,src/battle/four_call_offset120.c,FourCallOffset120,O4
-021B84C4,432,asm,,,
+021B84C4,352,c,src/battle/vt_byval_ctor_init_021B84C4.c,func_021B84C4,O4
 021B8624,72,c,src/battle/alloc94_ctor_pair_byte_021B0A50.c,Ctor_021B0A50,O4
 021B8674,56,c,src/battle/vec124_find_check_handle_021B8674.c,sub_21B8674,O4
 021B86AC,36,c,src/battle/call_chain_add_x.c,Func86AC,O4
@@ -1132,7 +1132,7 @@ address,size,kind,source,function,flags
 021C5988,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021C5994,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021C59A0,18,c,src/battle/two_call_return_self.c,TwoCallReturnSelf,O4
-021C59B4,196,asm,,,
+021C59B4,196,c,src/battle/vec_ctor_move_assign_021C59B4.c,Ctor_021C59B4,O4
 021C5A78,42,c,src/battle/dtor_close_file_10.c,f_021C5A78,O4
 021C5AA4,48,c,src/battle/dtor_cond_free_sub10.c,Func_021C5AA4,O4
 021C5AD4,1440,asm,,,
