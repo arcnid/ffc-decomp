@@ -5,12 +5,8 @@
 Matching decompilation of Fossil Fighters Champions (NDS) overlay 2 (battle system).
 Goal: C source that compiles byte-identical to the original ROM via mwccarm.
 
-**BUILD-VERIFIED: 954/1336 build from C into a SHA1-identical overlay (71.4%, `make verify` → MATCH).**
-(Waves 3+4, 2026-09-03..08: 811 → 954 via parallel agent batches + label-deletes cleanup. See session sections at the bottom and docs/PLAYBOOK_WAVE3.md for the discovery log.)
-
-Two coverage numbers, don't confuse them:
-- **255 build-verified** — compile from a committed .c with a real name, byte-match, wired into `make`. This is the number that counts for release.
-- **~352 ever-matched** — addresses matched at least once in a scratch/template file (`tools/matched_addrs.txt`). Superset of the above; the gap is un-committed/template-drift work.
+**BUILD-VERIFIED: 1102/1373 build from C into a SHA1-identical overlay (80.3%, `make verify` → MATCH).**
+(Updated 2026-10-13, wave 5 in progress — check the bottom "Session" entries for the latest number; this header lags behind live harvests by design, re-sync it whenever you read this file stale.)
 
 Build: `make verify` → SHA1 511c76bf...504f87f7 MATCH. Pipeline in docs/BUILD.md.
 Analysis docs: docs/BATTLE_FLOW.md (move/accuracy pipeline), docs/DAMAGE_FORMULA.md (in progress).
@@ -335,3 +331,30 @@ Next session: re-dispatch three full untouched tiers from scratch:
 All three can be resumed via Workflow({scriptPath: ..., resumeFromRunId: ...})
 with the same args as logged in each run's summary above, or just re-dispatched
 fresh since nothing cached successfully.
+
+## Tool gap identified 2026-10-13: decomp-permuter-arm NOT wired in
+
+Investigated pulling in https://github.com/laqieer/decomp-permuter-arm to crack the two
+long-standing near-miss blockers (stable_sort_adaptive family, 10B short after ~30 source
+shapes; callee-saved-seed regalloc cluster, ~10 fns, ~35 shapes tried). Repo clones clean,
+pure Python, no exotic deps.
+
+BLOCKER: its Scorer (src/scorer.py) is hard-wired to GNU `objdump` for instruction-level
+diffing -- built for a GNU binutils toolchain, not our wine+mwccarm pipeline. Two paths to
+actually use it:
+  (a) prove GNU objdump can parse mwcc's object/ELF output (untested, may just fail), or
+  (b) write a custom Scorer subclass that reuses match_func.py's existing byte-exact +
+      reloc-masking comparison instead of objdump-based diffing (the real work -- this is
+      the `score()` method in src/scorer.py and the `o_file` plumbing in src/candidate.py)
+Also need a `compile.sh` wrapping our existing wine+mwccarm invocation (easy, same pattern
+as match_func.py already uses).
+
+This is an afternoon-sized integration task, not a quick plug-in. NOT attempted tonight to
+avoid splitting focus from the active wave. Next session: if picked up, point it FIRST at
+021CB298/021C2F9C/021D30BC (callee-saved-seed cluster, smallest members) and the
+stable_sort_adaptive_cbc9c.cpp sibling family (021CBC9E etc.) -- these are the only
+documented blockers where "logic is right, only register allocation differs," i.e. exactly
+what a permuter search is for. Ghidra pseudocode-seeding was also considered and rejected:
+not installed, and the giant-function bottleneck (600B-13KB) is blocked on unknown struct
+layouts/callee signatures, not asm-reading difficulty -- Ghidra's generic pseudocode
+wouldn't supply correct field names either.
