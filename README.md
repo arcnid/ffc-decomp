@@ -6,7 +6,9 @@ The goal is C source that compiles byte-for-byte identical to the original ROM, 
 
 ## Status
 
-**811 / 1,355 OV2 functions (59.9%) build-verified** — they compile from committed C into a SHA1-identical overlay. The remaining 544 use raw-byte fallback, so `make verify` is green at any coverage level.
+**1,077 / 1,364 OV2 functions (79.0%) build-verified** — they compile from committed C into a SHA1-identical overlay. The remaining functions use raw-byte fallback, so `make verify` is green at any coverage level.
+
+Beyond overlay 2, a full-game pipeline now exists: the entire ROM (arm9 + ITCM + DTCM + all 19 overlays, ~19,400 functions) extracts, delinks, and relinks byte-identical via a locally-patched [ds-decomp](https://github.com/AetiasHax/ds-decomp) toolchain with SDK5/DSi-enhanced cartridge support. Those patches and the full-game tree will land here as they stabilize.
 
 ```
 original SHA1: 511c76bf315c6cc35db50c8d9a1084e7504f87f7

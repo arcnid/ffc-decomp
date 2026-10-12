@@ -300,3 +300,21 @@ rows; regenerate the target list from manifest.csv (kind=asm), filter documented
 blockers (addendum), grep src/battle for addr/addr-2 first. Blocker cluster should be
 re-attempted FIRST with the C++ value-init breakthrough on members with the spare
 frame word.
+
+## Session 2026-10-12 — Wave 5 rounds 1-2 + full-ROM dsd pipeline
+
+954 → 1061 build-verified (71.4% → 78.1%), SHA1 MATCH. Round 1 (140 targets 52-244B,
+20 workers): 12/20 completed before the 7:10am session-limit cutoff, resumed after reset.
+Round 2 (132 targets 244-596B): all 22 workers killed by the limit mid-flight; partial
+saves harvested (resume via workflow run wf_bb1875fc-bc8 or just re-dispatch remaining
+manifest asm rows). Notable cracks: 021B7ACC rect forwarder (overturns wave-3 KNOWN
+BLOCKED — width-local merged with tl.x), zero-hoist push_back blocker (#pragma
+opt_propagation off + shared zv local, 021A1AF8), std::lower_bound family (021D1814 .cpp).
+
+**FULL-GAME PIPELINE LIVE at ~/ffc-decomp-full** (see memory + its BUILD.md): patched
+dsd (SDK5/TWL fixes in tools/ds-rom + tools/ds-decomp clones, committed locally) does
+extract/init/dis/delink/lcf; `make all` links all 22 modules (arm9+itcm+dtcm+ov000-18)
+via mwldarm dsi/1.6sp2, all pass `dsd check modules`, ROM byte-identical in NTR regions.
+Real inventory: ~19.4k functions game-wide (arm9 8163, overlays 11242); ov002 = 1179
+real functions. Next: port src/battle matches into dsd tree as C TUs; dsd sig for
+NitroSDK bulk-match; rounds for >244B tiers.

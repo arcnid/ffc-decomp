@@ -1,0 +1,51 @@
+/* 0x021D2CD0 (size 0x7C incl 2B pad) — std::vector<Elem0x30>::insert-range tail.
+   *** NOT A dsi/1.1 MATCH — byte-exact (122/122, BL relocs masked) ONLY under
+   tools/mwccarm/2.0/base -O4,p. ***
+   dsi/1.1 at both -O4 and -O4,p ALWAYS hoists the 0x30 scale constant into a
+   callee-saved reg across the Reserve call (movs r7,#0x30 pre-call, +2B, muls r1,r7,r1)
+   instead of rematerializing movs r0,#0x30 after the call; invariant across ~25 source
+   shapes (inline end() helper, explicit u32 math, volatile count, extern-div models,
+   5 de-opt pragmas). mwcc 2.0/base rematerializes and reproduces the original bytes
+   exactly, including the Al-dance register assignment and tail schedule.
+   => concrete evidence for the wave-5 hypothesis that the byte-identical STL template
+   clones in ov2 come from a PREBUILT library built with a different (2.0-era) mwcc.
+   Do NOT wire into the dsi/1.1 manifest; kept for archaeology. */
+#include "game/battle.h"
+
+typedef struct { s32 vals[6]; } S24;
+typedef struct { u32 a, b, c, d, e; S24 s; u32 f; } Elem;
+typedef struct { Elem* data; s32 count; } Vec;
+typedef struct { u8 b; } Al;
+
+extern void Reserve(Vec* v, s32 n, Al a);
+
+void InsertRange(Vec* v, Elem* first, Elem* last)
+{
+    s32 n;
+    Al arr[2];
+    Al* q;
+    Elem* dst;
+    n = last - first;
+    if (n != 0) {
+        q = arr + 1;
+        q->b = 0;
+        Reserve(v, n, *q);
+        dst = v->data + v->count;
+        if (first != last) {
+            do {
+                if (dst != 0) {
+                    dst->a = first->a;
+                    dst->b = first->b;
+                    dst->c = first->c;
+                    dst->d = first->d;
+                    dst->e = first->e;
+                    dst->s = first->s;
+                    dst->f = first->f;
+                }
+                first += 1;
+                dst += 1;
+                v->count = v->count + 1;
+            } while (first != last);
+        }
+    }
+}

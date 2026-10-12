@@ -39,3 +39,18 @@
 021D2C1E
 021D2D82
 021B9B9C  # literal pool of 021B9B2C, not a function
+021AE236  # stale off-by-2 (021AE234 wired)
+021B2172  # stale off-by-2 (021B2170)
+021C69DA  # stale off-by-2 (021C69D8)
+021C781A  # stale off-by-2 (021C7818)
+021C7D92  # stale off-by-2 (021C7D90)
+021D396E  # stale off-by-2 (021D396C)
+021B8CD6  # stale off-by-2 (021B8CD4)
+021BF23E  # stale off-by-2 (021BF23C)
+021A3F06  # stale off-by-2 (021A3F04)
+021AE1D6  # stale off-by-2 (021AE1D4)
+021B8626  # stale off-by-2 (021B8624)
+021A3F4E  # stale off-by-2 (021A3F4C)
+021B6342  # stale off-by-2 + split (021B6340 + 021B6374 units)
+021A1716  # stale off-by-2 (021A1714)
+021B4586  # stale off-by-2 (021B4584)
