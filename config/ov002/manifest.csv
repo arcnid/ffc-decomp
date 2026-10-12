@@ -125,7 +125,7 @@ address,size,kind,source,function,flags
 0219C3FC,408,asm,,,
 0219C594,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
 0219C5C4,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
-0219C5D8,50,c,src/battle/linear_search_0219C5D8.c,f,O4
+0219C5D8,50,c,src/battle/find_by_type.c,FindVivoByType,O4
 0219C60C,70,c,src/battle/jtable_0219C60C.c,Func_0219C60C,O4p
 0219C654,88,c,src/battle/count_match_type.c,CountMatchType_219C654,O4p
 0219C6AC,100,c,src/battle/classify_219c6ac.c,Classify_219C6AC,O4
@@ -134,7 +134,7 @@ address,size,kind,source,function,flags
 0219C7F8,122,c,src/battle/vec_sorted_insert_pri_0219c7f8.c,f,O4p
 0219C7FA,122,asm,,,
 0219C874,26,c,src/battle/delete_virt_dtor_c874.cpp,_Z13CallDtor_C874PvP6B_C874,O4
-0219C890,28,c,src/battle/status_three_args_zero.c,StatusThreeArgsZero,O4
+0219C890,28,c,src/battle/set_status_byte3.c,SetStatusByte3,O4
 0219C8AC,32,c,src/battle/set_status_large_off.c,SetStatusByteLargeOff,O4
 0219C8CC,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 0219C8D8,18,c,src/battle/two_call_return_self.c,TwoCallReturnSelf,O4
@@ -201,10 +201,10 @@ address,size,kind,source,function,flags
 0219F984,18,c,src/battle/two_call_return_self.c,TwoCallReturnSelf,O4
 0219F99C,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 0219F9AC,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
-0219F9B8,128,c,src/battle/vector_check_len_9F9B8.c,grow_0219F9B8,O4p
+0219F9B8,128,c,src/battle/check_len_0219F9B8.c,CheckLen_0219F9B8,O4p
 0219FA38,198,c,src/battle/vec4_fill_insert_grow_0219fa38.c,FillInsert_0219FA38,O4p
 0219FB00,34,c,src/battle/vec_pop_n.c,Vec_PopN4,O4
-0219FB24,128,c,src/battle/vector_check_len_9FB24.c,grow_0219FB24,O4p
+0219FB24,128,c,src/battle/check_len_0219FB24.c,CheckLen_0219FB24,O4p
 0219FBA4,544,asm,,,
 0219FDC4,36,c,src/battle/vec_popn_38_0219FDC4.c,Vec_PopN38_0219FDC4,O4
 0219FDE8,48,c,src/battle/vec_clear_all.c,Func_0219FDE8,O4p
@@ -230,8 +230,8 @@ address,size,kind,source,function,flags
 021A0E58,380,asm,,,
 021A0FD4,240,c,src/battle/battle_seq_update_pairstubs_021a0fd4.c,Main_021A0FD4,O4
 021A10C4,10,c,src/battle/battle_seq_update_pairstubs_021a0fd4.c,Stub1_021A10C4,O4
-021A10D0,2,c,src/battle/dtor_sub18_return_self_021BD5E4.c,nullsub_021BD5FC,O4
-021A10D4,6,c,src/battle/elem4_array_ctor_unit_021c90a0.cpp,f_021C917C,O4
+021A10D0,2,c,src/battle/flag_edge_stub_021C7FB4.c,Stub_021C7FB4,O4
+021A10D4,6,c,src/battle/battle_seq_update_pairstubs_021a0fd4.c,Stub3_021A10D4,O4
 021A10DC,220,asm,,,
 021A11B8,140,c,src/battle/dtor_2member_021A11B8.c,Dtor,O4
 021A1244,148,c,src/battle/dtor_2member_deleting_021A1244.c,Dtor,O4
@@ -257,9 +257,9 @@ address,size,kind,source,function,flags
 021A18BC,8,c,src/battle/battle_state.c,BattleState_GetTeamSize,O4
 021A18C4,12,c,src/battle/battle_state.c,BattleState_GetVivosaur,O4
 021A18D0,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
-021A18E4,50,c,src/battle/f_021A18E4.c,Count_021A18E4,O4p
-021A1918,64,c,src/battle/find_alive_by_prop.c,FindAliveByProperty,O4p
-021A1958,50,c,src/battle/linear_search_0219C5D8.c,f,O4
+021A18E4,50,c,src/battle/count_dead.c,CountDeadVivosaurs,O4p
+021A1918,64,c,src/battle/search_bool_021A1918.c,Func_021A1918,O4p
+021A1958,50,c,src/battle/find_by_type.c,FindVivoByType,O4
 021A198C,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
 021A19A0,58,c,src/battle/count_matches_021A19A0.c,f,O4p
 021A19DC,70,c,src/battle/attack_type6.c,FindAttackType6Vivo,O4
@@ -341,7 +341,7 @@ address,size,kind,source,function,flags
 021A50C8,44,asm,,,
 021A50F4,46,c,src/battle/vec_erase8.c,Func_021A50F4,O4
 021A5124,192,asm,,,
-021A5164,128,c,src/battle/vector_check_len_A5164.c,grow_021A5164,O4p
+021A5164,128,c,src/battle/check_len_021A5164.c,CheckLen_021A5164,O4p
 021A51E4,24,c,src/battle/two_call_args.c,TwoCallArgs,O4
 021A51FC,28,c,src/battle/phantomframe_bufdtor_021A51FC.c,sub_21A51FC,O4p
 021A5218,36,c,src/battle/vec_at.c,VecAt4,O4
@@ -388,7 +388,7 @@ address,size,kind,source,function,flags
 021A6C10,456,asm,,,
 021A6DD8,164,c,src/battle/factory_object_0219A938.c,func,O4
 021A6E7C,2364,asm,,,
-021A77B8,448,asm,,,
+021A77B8,448,c,src/battle/turn_damage_desc_ctor_021a77b8.c,Ctor_021A77B8,O4
 021A7978,732,c,src/battle/turn_damage_sequencer_021a7978.c,func_021A7978,O4
 021A7C54,668,asm,,,
 021A7EF0,2392,asm,,,
@@ -472,7 +472,7 @@ address,size,kind,source,function,flags
 021AC9D8,24,c,src/battle/affinity_cmp_lookup_classify_021AC95C.c,Lookup_021AC9D8,O4
 021AC9F0,76,c,src/battle/affinity_cmp_lookup_classify_021AC95C.c,Classify_021AC9F0,O4p
 021ACA3C,256,asm,,,
-021ACB3C,540,asm,,,
+021ACB3C,540,c,src/battle/dispatch_lookup_021acb3c.c,Func,O4p
 021ACD58,208,c,src/battle/strtmp_dual_div_gate_021ACD58.c,f,O4
 021ACE28,180,c,src/battle/dirtable_absdiff_fxratio_021ACE28.c,F,O4p
 021ACEDC,50,c,src/battle/phantomframe_fxratio_021ACEDC.c,f,O4
@@ -497,7 +497,7 @@ address,size,kind,source,function,flags
 021AD2CC,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021AD2DC,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021AD2EC,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
-021AD2F8,128,c,src/battle/vector_check_len_AD2F8.c,grow_021AD2F8,O4p
+021AD2F8,128,c,src/battle/check_len_021AD2F8.c,CheckLen_021AD2F8,O4p
 021AD378,216,asm,,,
 021AD450,16,c,src/battle/init_field4_zero.c,InitField4Zero,O4
 021AD460,52,c,src/battle/vec_alloc_storage_021AD460.c,AllocStorage_021AD460,O4
@@ -778,7 +778,7 @@ address,size,kind,source,function,flags
 021B8250,52,c,src/battle/dtor_flag_1b8250.cpp,_Z1fP1Siiih,O4
 021B8284,42,c,src/battle/getstruct_1b8284.c,GetStruct_1B8284,O4
 021B8310,42,c,src/battle/status_cond_byte.c,StatusCondByte,O4
-021B8350,28,c,src/battle/status_three_args_zero.c,StatusThreeArgsZero,O4
+021B8350,28,c,src/battle/set_status_byte3.c,SetStatusByte3,O4
 021B836C,272,asm,,,
 021B847C,32,c,src/battle/three_call_offset120.c,ThreeCallOffset120,O4
 021B849C,38,c,src/battle/four_call_offset120.c,FourCallOffset120,O4
@@ -942,7 +942,7 @@ address,size,kind,source,function,flags
 021BD3B4,34,c,src/battle/loop_call2_021BD3B4.c,sub_021BD3B4,O4
 021BD464,36,c,src/battle/cond_status_call.c,ConditionalStatusCall,O4
 021BD488,46,c,src/battle/sso_ptr_select.c,sub_21BD488,O4
-021BD4B8,28,c,src/battle/status_three_args_zero.c,StatusThreeArgsZero,O4
+021BD4B8,28,c,src/battle/set_status_byte3.c,SetStatusByte3,O4
 021BD4D4,36,c,src/battle/vec_at_c_021A50A4.c,VecAtC_021A50A4,O4
 021BD4F8,72,c,src/battle/vec12_erase_021BD4F8.c,Erase,O4p
 021BD544,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
@@ -988,7 +988,7 @@ address,size,kind,source,function,flags
 021BF8FC,16,c,src/battle/call_fieldbc_then_sub_f8fc.c,FuncF8FC,O4
 021BF90C,3120,asm,,,
 021C053C,1928,asm,,,
-021C0CC4,68,c,src/battle/dtor_delete_member_14.c,Dtor_021C0CC4,O4
+021C0CC4,68,c,src/battle/f_021C0CC4.c,Dtor_021C0CC4,O4
 021C0D18,64,c,src/battle/f_021C0D18.c,Dtor_021C0D18,O4
 021C0D58,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021C0D64,70,c,src/battle/loop_bitmask_call_status_0d64.c,F,O4
@@ -1184,7 +1184,7 @@ address,size,kind,source,function,flags
 021C7EB0,72,c,src/battle/angle_deg_from_pair_021C7EB0.c,GetAngleDeg_021C7EB0,O4
 021C7F0C,122,c,src/battle/poll_flag_state_tri_021C7F0C.cpp,_Z13func_021C7F0CP3TriPh,O4p
 021C7F88,44,c,src/battle/poll_flag_state_tri_021C7F0C.cpp,_ZN2CtC2Ejjj,O4p
-021C7FB4,2,c,src/battle/dtor_sub18_return_self_021BD5E4.c,nullsub_021BD5FC,O4
+021C7FB4,2,c,src/battle/flag_edge_stub_021C7FB4.c,Stub_021C7FB4,O4
 021C7FB8,292,asm,,,
 021C80DC,72,c,src/battle/angle_normalize_check_80dc.c,F,O4p
 021C8124,108,c,src/battle/score_scaled_8124.c,f,O4
@@ -1205,7 +1205,7 @@ address,size,kind,source,function,flags
 021C86FC,20,c,src/battle/bool_eq14_c86fc.c,FuncC86FC,O4
 021C8710,96,asm,,,
 021C8770,36,c,src/battle/loop_vector_call_8688.c,Func8770,O4
-021C8794,128,asm,,,
+021C8794,126,c,src/battle/vec_scan_push_or_notify_021c8794.c,func_021C8794,O4p
 021C8814,52,c,src/battle/init_vtable_pair_copy.c,Func_021C8814,O4
 021C8848,32,c,src/battle/ctor_vtable_member14_021C8848.c,Func8848,O4
 021C8868,36,c,src/battle/dtor_chain3_021C8868.c,Dtor,O4
@@ -1213,7 +1213,7 @@ address,size,kind,source,function,flags
 021C88AC,172,c,src/battle/f_021C88AC.c,Func_021C88AC,O4
 021C8958,304,c,src/battle/battle_result_update_021c8958.c,battle_result_update,O4p
 021C8A88,276,asm,,,
-021C8B9C,428,asm,,,
+021C8B9C,428,c,src/battle/battle_result_update2_021C8B9C.c,func_021C8B9C,O4p
 021C8D48,180,c,src/battle/f_021C8D48.c,Func_021C8D48,O4
 021C8DFC,18,c,src/battle/get_chain308.c,GetChainedField308,O4
 021C8E44,44,c,src/battle/five_arg_two_lit.c,FiveArgTwoLit,O4p
@@ -1223,7 +1223,7 @@ address,size,kind,source,function,flags
 021C8F98,88,c,src/battle/ctor_elemloop_021C8F40.c,Ctor,O4
 021C8FF0,4,c,src/battle/elem4_array_ctor_unit_021c90a0.cpp,f_021C9164,O4
 021C8FFC,4,c,src/battle/elem_array_accessors_021D32F8.c,Get2_32F8,O4
-021C9000,4,c,src/battle/elem_array_accessors_021D32F8.c,Get3_32F8,O4
+021C9000,4,c,src/battle/dtor2_strbuf_accessors_021C2904.c,GetC_021C291C,O4
 021C9054,24,c,src/battle/init_cb_3_8_021C9054.c,f_021C9054,O4
 021C906C,24,c,src/battle/init_cb_3_8_021C9054.c,f_021C9054,O4
 021C9084,28,c,src/battle/ctor_zero2_30.c,sub_21C9084,O4
@@ -1248,7 +1248,7 @@ address,size,kind,source,function,flags
 021C95BC,260,c,src/battle/ctor_vtbl2_fieldinit_021C95BC.c,Ctor_021C95BC,O4
 021C96C0,30,c,src/battle/ctor_vtbl2_fieldinit_021C95BC.c,Helper_021C96C0,O4
 021C96E0,68,c,src/battle/dtor_delete_104.c,DtorDelete104,O4
-021C9724,72,c,src/battle/dtor_delete_104_vt2.c,Dtor_021C9724,O4
+021C9724,72,c,src/battle/f_021C9724.c,Dtor_021C9724,O4
 021C976C,68,c,src/battle/dtor_delete_104.c,DtorDelete104,O4
 021C97B0,92,c,src/battle/f_021C97B0.c,Func_021C97B0,O4
 021C980C,592,asm,,,
@@ -1339,7 +1339,7 @@ address,size,kind,source,function,flags
 021D2B7C,36,c,src/battle/vec_at_8_021D2B7C.c,VecAt8_021D2B7C,O4
 021D2BA0,60,c,src/battle/f_021D2BA0.c,Erase8_021D2BA0,O4
 021D2BDC,192,asm,,,
-021D2C1C,128,c,src/battle/vector_check_len_A5164.c,grow_021A5164,O4p
+021D2C1C,128,c,src/battle/check_len_021A5164.c,CheckLen_021A5164,O4p
 021D2C9C,24,c,src/battle/two_call_args.c,TwoCallArgs,O4
 021D2CB4,28,c,src/battle/phantomframe_bufdtor_021A51FC.c,sub_21A51FC,O4p
 021D2CD0,124,asm,,,
