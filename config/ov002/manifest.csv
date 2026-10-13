@@ -29,7 +29,7 @@ address,size,kind,source,function,flags
 02197634,128,c,src/battle/ctor_sub60_h17_02197634.c,Ctor,O4
 021976B4,144,c,src/battle/ctor_bigcopy_vtbl_021976B4.c,Ctor_021976B4,O4
 02197744,76,c,src/battle/mask_build_loop_7744.c,F,O4p
-02197790,852,asm,,,
+02197790,852,c,src/battle/event_kind_switch_send_02197790.c,Func_02197790,O4p
 02197AE4,34,c,src/battle/counter_tick_call_02197AE4.c,F,O4
 02197B08,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 02197B14,18,c,src/battle/two_call_return_self.c,TwoCallReturnSelf,O4
@@ -125,7 +125,7 @@ address,size,kind,source,function,flags
 0219C3FC,408,asm,,,
 0219C594,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
 0219C5C4,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
-0219C5D8,50,c,src/battle/find_by_type.c,FindVivoByType,O4
+0219C5D8,50,c,src/battle/linear_search_0219C5D8.c,f,O4
 0219C60C,70,c,src/battle/jtable_0219C60C.c,Func_0219C60C,O4p
 0219C654,88,c,src/battle/count_match_type.c,CountMatchType_219C654,O4p
 0219C6AC,100,c,src/battle/classify_219c6ac.c,Classify_219C6AC,O4
@@ -263,9 +263,9 @@ address,size,kind,source,function,flags
 021A18BC,8,c,src/battle/battle_state.c,BattleState_GetTeamSize,O4
 021A18C4,12,c,src/battle/battle_state.c,BattleState_GetVivosaur,O4
 021A18D0,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
-021A18E4,50,c,src/battle/f_021A18E4.c,Count_021A18E4,O4p
+021A18E4,50,c,src/battle/count_dead.c,CountDeadVivosaurs,O4p
 021A1918,64,c,src/battle/find_alive_by_prop.c,FindAliveByProperty,O4p
-021A1958,50,c,src/battle/find_by_type.c,FindVivoByType,O4
+021A1958,50,c,src/battle/linear_search_0219C5D8.c,f,O4
 021A198C,18,c,src/battle/has_dead.c,BattleState_HasDead,O4
 021A19A0,58,c,src/battle/count_matches_021A19A0.c,f,O4p
 021A19DC,70,c,src/battle/attack_type6.c,FindAttackType6Vivo,O4
@@ -376,7 +376,7 @@ address,size,kind,source,function,flags
 021A53A0,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021A53B4,52,c,src/battle/vec_alloc_storage.c,AllocStorage8,O4
 021A53E8,196,c,src/battle/vec8_fill_insert_grow_021a53e8.c,FillInsert_021A53E8,O4p
-021A54AC,16,c,src/battle/init_field4_zero.c,InitField4Zero,O4
+021A54AC,16,c,src/battle/zero_field4_call.c,ZeroField4CallReturn,O4
 021A54BC,52,c,src/battle/vec_alloc_storage.c,AllocStorage8,O4
 021A54F0,56,asm,,,
 021A5528,104,c,src/battle/cond_setup_5528.c,f,O4
@@ -404,7 +404,7 @@ address,size,kind,source,function,flags
 021A8C94,64,c,src/battle/switch_check_flags_021A8C94.c,Func_021A8C94,O4
 021A8CD4,704,asm,,,
 021A8F94,282,c,src/battle/check_action_validity.c,func,O4p
-021A90B0,548,asm,,,
+021A90B0,548,c,src/battle/event_effect_dispatch_021A90B0.c,func_021A90B0,O4
 021A92D4,188,c,src/battle/copy_ctor_a92d4.c,f,O4
 021A9390,204,c,src/battle/event_checks_sendmsgs_021a9390.c,func_021A9390,O4p
 021A945C,160,asm,,,
@@ -505,7 +505,7 @@ address,size,kind,source,function,flags
 021AD2EC,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021AD2F8,128,c,src/battle/check_len_021AD2F8.c,CheckLen_021AD2F8,O4p
 021AD378,216,asm,,,
-021AD450,16,c,src/battle/init_field4_zero.c,InitField4Zero,O4
+021AD450,16,c,src/battle/zero_field4_call.c,ZeroField4CallReturn,O4
 021AD460,52,c,src/battle/vec_alloc_storage_021AD460.c,AllocStorage_021AD460,O4
 021AD494,120,asm,,,
 021AD50C,38,c,src/battle/pair_from_calc_50c.c,f_021AD50C,O4p
@@ -655,7 +655,7 @@ address,size,kind,source,function,flags
 021B38A8,244,asm,,,
 021B399C,148,c,src/battle/confirm_select_sfx_chain_021B399C.c,func_021B399C,O4
 021B3A30,264,c,src/battle/trylink_magicguard_loops_021b3a30.c,TryLink_021B3A30,O4
-021B3B38,58,c,src/battle/field_read_cond_store_e0_b.c,Func4AD4,O4
+021B3B38,58,c,src/battle/field_read_cond_store_e0.c,Func3B38,O4
 021B3B74,100,c,src/battle/f_021B3B74.c,Func_021B3B74,O4
 021B3BD8,72,c,src/battle/ctor94_pair_flag_021B3BD8.c,Ctor_021B3BD8,O4
 021B3C20,112,asm,,,
@@ -679,7 +679,7 @@ address,size,kind,source,function,flags
 021B496C,140,c,src/battle/init_flag_loop_021B496C.c,Do,O4
 021B49F8,152,c,src/battle/cond_check_loop_021B49F8.c,Do,O4
 021B4A90,68,c,src/battle/check_type_signature_4a90.c,Func4A90,O4
-021B4AD4,58,c,src/battle/field_read_cond_store_e0_b.c,Func4AD4,O4
+021B4AD4,58,c,src/battle/field_read_cond_store_e0.c,Func3B38,O4
 021B4B10,772,asm,,,
 021B4E14,228,c,src/battle/derived_ctor_b4e14.c,Ctor_b4e14,O4
 021B4EF8,128,c,src/battle/dtor_notify3_021B4EF8.c,Dtor,O4p
@@ -688,7 +688,7 @@ address,size,kind,source,function,flags
 021B5114,312,asm,,,
 021B524C,472,c,src/battle/reward_flow_021B524C.c,Func_021B524C,O4p
 021B5424,20,c,src/battle/b508_conditionals.c,CallThenGlobal,O4
-021B5438,58,c,src/battle/field_read_cond_store_e0_b.c,Func4AD4,O4
+021B5438,58,c,src/battle/field_read_cond_store_e0.c,Func3B38,O4
 021B5474,92,c,src/battle/ctor_21b5474.c,Ctor_21B5474,O4p
 021B54D0,108,c,src/battle/apply_loop_b54d0.c,f_021B54D0,O4p
 021B553C,112,c,src/battle/apply_loop_free_b553c.c,f_021B553C,O4p
@@ -732,7 +732,7 @@ address,size,kind,source,function,flags
 021B6538,1432,asm,,,
 021B6AD0,876,asm,,,
 021B6E3C,56,c,src/battle/field_read_cond_store_154.c,Func6E3C,O4
-021B6E74,92,c,src/battle/strlen_loop_b6e74.c,func_6e74,O4
+021B6E74,92,c,src/battle/bitfield_gate_loop_021B6E74.c,Func_021B6E74,O4
 021B6ED0,428,asm,,,
 021B707C,364,asm,,,
 021B71E8,1492,asm,,,
@@ -929,7 +929,7 @@ address,size,kind,source,function,flags
 021BC548,26,c,src/battle/call_2fields_status2.c,Call2FieldsStatus2,O4
 021BC564,80,c,src/battle/f_021BC564.c,Func_021BC564,O4
 021BC5B4,190,c,src/battle/handle_rebuild_virt_pairfwd_021bc5b4.c,f,O4
-021BC674,46,c,src/battle/handle_rebuild_virt_pairfwd_021bc5b4.c,g,O4
+021BC674,46,c,src/battle/pair_store_virt3_021BC676.c,f_021BC676,O4
 021BC6A4,18,c,src/battle/virt_call2_null_80_s8.c,CallVirtN80_8,O4
 021BC6B8,18,c,src/battle/virt_call1_null_80_s10.c,CallVirtN80_10,O4
 021BC6CC,18,c,src/battle/virt_call1_null_80_s11.c,CallVirtN80_11,O4
@@ -939,7 +939,7 @@ address,size,kind,source,function,flags
 021BC7CC,26,c,src/battle/bool_field80_and_sub_bc7cc.c,FuncBC7CC,O4
 021BC7E8,20,c,src/battle/cond_tail_field80_bc7e8.c,FuncBC7E8,O4
 021BC804,30,c,src/battle/cond_prepare_flag.c,sub_021BC804,O4
-021BC834,348,asm,,,
+021BC834,348,c,src/battle/pair_child_ctor_021BC834.c,Ctor,O4
 021BC990,12,c,src/battle/call_return_self.c,CallReturnSelf,O4
 021BC99C,2084,asm,,,
 021BD1C0,226,c,src/battle/slot_pair_tick_mod_advance_021bd1c0.c,func_021BD1C0,O4p
@@ -1231,7 +1231,7 @@ address,size,kind,source,function,flags
 021C8F98,88,c,src/battle/ctor_elemloop_021C8F40.c,Ctor,O4
 021C8FF0,4,c,src/battle/elem4_array_ctor_unit_021c90a0.cpp,f_021C9164,O4
 021C8FFC,4,c,src/battle/elem_array_accessors_021D32F8.c,Get2_32F8,O4
-021C9000,4,c,src/battle/elem_array_accessors_021D32F8.c,Get3_32F8,O4
+021C9000,4,c,src/battle/dtor2_strbuf_accessors_021C2904.c,GetC_021C291C,O4
 021C9054,24,c,src/battle/init_cb_3_8_021C9054.c,f_021C9054,O4
 021C906C,24,c,src/battle/init_cb_3_8_021C9054.c,f_021C9054,O4
 021C9084,28,c,src/battle/ctor_zero2_30.c,sub_21C9084,O4
@@ -1357,8 +1357,8 @@ address,size,kind,source,function,flags
 021D2E00,280,asm,,,
 021D2F18,52,c,src/battle/vec_alloc_storage.c,AllocStorage8,O4
 021D2F4C,204,asm,,,
-021D3018,16,c,src/battle/init_field4_zero.c,InitField4Zero,O4
-021D3028,16,c,src/battle/init_field4_zero.c,InitField4Zero,O4
+021D3018,16,c,src/battle/zero_field4_call.c,ZeroField4CallReturn,O4
+021D3028,16,c,src/battle/zero_field4_call.c,ZeroField4CallReturn,O4
 021D3038,52,c,src/battle/vec_alloc_storage.c,AllocStorage8,O4
 021D306C,28,c,src/battle/phantomframe_bufdtor_021A51FC.c,sub_21A51FC,O4p
 021D3088,52,c,src/battle/vec_alloc_storage30_021D2D4C.c,AllocStorage30,O4

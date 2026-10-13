@@ -1,11 +1,5 @@
-/*
- * func_021A90B0 — event-effect dispatcher (switch on effect type byte 4/5/8/0x17,
- * tail: Alloc(0x6c) + memberwise EventData(0x5c) copy + Ctor/Fmt/Send, Fmt+Send
- * run unconditionally with cres=NULL on alloc failure; Destroy guarded by flag).
- * Address: 0x021A90B0  Size: 0x224 (548 bytes)
- * Flags: -O4 (plain; also matches at -O4,p)
- * MATCH! verified via tools/match_func.py
- */
+/* 021A90B0 - 548 (0x224) bytes - event effect dispatcher + EventData(0x5c) Alloc/Ctor tail
+   flags: -O4 (plain), matched via tools/match_func.py 021A90B0 224 */
 #include "game/battle.h"
 
 typedef struct {
@@ -32,8 +26,10 @@ typedef struct {
     u32 f12;
     u32 f13;
     u8  f14;
-    Pair p38;
-    Pair p40;
+    u32 f15;
+    u32 f16;
+    u32 f17;
+    u32 f18;
     Pair p48;
     u8  f21;
     u8  f22;
@@ -140,12 +136,13 @@ void func_021A90B0(u8* s, EventData* a) {
         S(s, a);
     }
     {
-        void* obj;
-        u32 cres;
+        void* cres;
+        Pair* dst48;
+        u32* b1;
+        u8* b2;
         need_cleanup = 0;
-        obj = Alloc(0x6c);
-        cres = (u32)obj;
-        if (obj != 0) {
+        cres = Alloc(0x6c);
+        if (cres != 0) {
             t.f0 = a->f0;
             t.id = a->id;
             t.f2 = a->f2;
@@ -161,21 +158,27 @@ void func_021A90B0(u8* s, EventData* a) {
             t.f12 = a->f12;
             t.f13 = a->f13;
             t.f14 = a->f14;
-            { Pair* d; u32 x; x = a->p38.a; d = (Pair*)(void*)&t.p38; d->a = x; x = a->p38.b; d->b = x; }
-            { Pair* d; u32 x; x = a->p40.a; d = (Pair*)(void*)&t.p40; d->a = x; x = a->p40.b; d->b = x; }
-            { Pair* d; u32 x; x = a->p48.a; d = (Pair*)(void*)&t.p48; d->a = x; x = a->p48.b; d->b = x; }
-            t.f21 = a->f21;
-            t.f22 = a->f22;
+            b1 = (u32*)&t.f15;
+            b1[0] = a->f15;
+            b1[1] = a->f16;
+            b2 = (u8*)&t.f17;
+            *(u32*)b2 = a->f17;
+            *(u32*)(b2 + 4) = a->f18;
+            dst48 = &t.p48;
+            dst48->a = a->p48.a;
+            dst48->b = a->p48.b;
+            b2[0x10] = a->f21;
+            b2[0x11] = a->f22;
             t.f23 = a->f23;
             t.f24 = a->f24;
             need_cleanup = 1;
-            cres = (u32)Ctor(obj, &t);
+            cres = Ctor(cres, &t);
         }
-        cres = Fmt(s + 0x80, cres);
+        cres = (void*)Fmt(s + 0x80, (u32)cres);
         s = s + 0x14;
-        Send(s, cres);
+        Send(s, (u32)cres);
+        if (need_cleanup != 0) Destroy(&t);
     }
-    if (need_cleanup != 0) Destroy(&t);
 end:
     return;
 }
