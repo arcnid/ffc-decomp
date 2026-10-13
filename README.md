@@ -6,12 +6,12 @@ The goal is C source that compiles byte-for-byte identical to the original ROM, 
 
 ## Status
 
-**1,096 / 1,372 OV2 functions (79.9%) build-verified** — they compile from committed C into a SHA1-identical overlay. The remaining functions use raw-byte fallback, so `make verify` is green at any coverage level.
+**1,141 / 1,382 OV2 functions (82.6%) build-verified** — they compile from committed C into a SHA1-identical overlay. The remaining functions use raw-byte fallback, so `make verify` is green at any coverage level.
 
 | Milestone | Status |
 |---|---|
-| Battle overlay (ov002) functions | **79.9%** matched from C |
-| Battle overlay bytes | 27.2% (small functions matched first; the big state machines remain) |
+| Battle overlay (ov002) functions | **82.6%** matched from C |
+| Battle overlay bytes | 32.0% (small functions matched first; the big state machines remain) |
 | Full-ROM extract → relink pipeline | ✅ working — all 22 modules rebuild byte-identical |
 | Full game (~19,400 functions) | battle overlay first; other 21 modules scaffolded, not yet decompiled |
 

@@ -5,8 +5,8 @@
 Matching decompilation of Fossil Fighters Champions (NDS) overlay 2 (battle system).
 Goal: C source that compiles byte-identical to the original ROM via mwccarm.
 
-**BUILD-VERIFIED: 1102/1373 build from C into a SHA1-identical overlay (80.3%, `make verify` → MATCH).**
-(Updated 2026-10-13, wave 5 in progress — check the bottom "Session" entries for the latest number; this header lags behind live harvests by design, re-sync it whenever you read this file stale.)
+**BUILD-VERIFIED: 1141/1382 build from C into a SHA1-identical overlay (82.6%, `make verify` → MATCH).**
+(Updated 2026-10-13 end of wave 5 — check the bottom "Session" entries for the latest number; this header lags behind live harvests by design, re-sync it whenever you read this file stale.)
 
 Build: `make verify` → SHA1 511c76bf...504f87f7 MATCH. Pipeline in docs/BUILD.md.
 Analysis docs: docs/BATTLE_FLOW.md (move/accuracy pipeline), docs/DAMAGE_FORMULA.md (in progress).
@@ -358,3 +358,34 @@ what a permuter search is for. Ghidra pseudocode-seeding was also considered and
 not installed, and the giant-function bottleneck (600B-13KB) is blocked on unknown struct
 layouts/callee signatures, not asm-reading difficulty -- Ghidra's generic pseudocode
 wouldn't supply correct field names either.
+
+## Session 2026-10-12/13 — Wave 5 complete: 954 → 1141 (71.4% → 82.6%)
+
+Three phases across one marathon session (multiple usage-cap interruptions, all recovered):
+1. **Bulk waves** (rounds 1-4 + giant wave, ~130 workers total): cleared the easy/mid tiers,
+   954 → 1117. Giant functions (600B-13KB) surveyed and documented as specialist-needed
+   (jump tables with 23-142 cases, 10-115 unknown callees each) rather than burned on.
+2. **Finisher waves** (diagnosis-driven: each worker gets the prior attempt's byte-level
+   autopsy + saved best source + untried levers): went ~17-for-26 on previously-stuck
+   targets. Closed all three 2-byte gaps, the 852B event dispatcher 02197790 (largest
+   match in project history), 021A90B0 (548B), and a dozen more. New codegen levers
+   documented in PLAYBOOK_WAVE3 "Finisher-wave levers".
+3. **Permuter-class classification**: ~15 targets now PROVEN pure-codegen gaps
+   (semantics byte-correct, only regalloc/scheduling differs, source space exhausted):
+   021A945C (9B), 021B5114 (7B), 0219FBA4 (instruction-stream identical, one sp word),
+   021D0C00+4 clones (22B, one reg swap), 021CAD00 (24B), 021ABEF0 (24B),
+   021B4754/021B3C20 (4B/2B). See PLAYBOOK_WAVE3 shortlist + STATUS "Tool gap" section:
+   decomp-permuter-arm integration is the single highest-leverage next investment.
+
+Remaining inventory (241 asm rows): ~40 giants >1200B (dedicated sessions each),
+~15 permuter-class, ~15 hard blockers (mwcc-2.0/library archaeology), rest = diagnosed
+mid-size in docs/FINISHER_QUEUE.md (items 4-7, 9-10 still open).
+
+OPERATIONAL LESSONS: (a) /tmp is wiped between sessions — frontier sources MUST be saved
+in-repo (src/battle/<name>_FRONTIER.c.txt); two frontiers were lost this way. (b) The
+refill-alert probe alarm (~/.claude/hooks/refill-alert.sh "H:MMam/pm") verifies refills
+via headless haiku probe and re-arms itself; arm it whenever a cap error shows a reset time.
+(c) Workflow runs can be resumed cross-restart via Workflow({scriptPath, resumeFromRunId}).
+
+Full-game pipeline (~/ffc-decomp-full) unchanged since its session note above: all 22
+modules relink byte-identical; next steps there are C-TU porting and dsd sig SDK matching.
