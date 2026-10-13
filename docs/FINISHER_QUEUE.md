@@ -1,5 +1,12 @@
 # Finisher queue — diagnosed targets awaiting completion
 
+> UPDATE 2026-10-13 pm: items 1,2,3,8 (021B836C, 021BC834, 021A90B0, 02197790) MATCHED.
+> 0219FBA4 now instruction-stream-identical (one sp+0 reserve word, permuter class).
+> 021ABEF0 at 24 masked bytes. LESSON: /tmp gets wiped between sessions — save all
+> frontier sources IN-REPO as src/battle/<name>_FRONTIER.c.txt, never only in /tmp.
+> (021D0C00/021CAD00 frontiers were lost this way; their winning constructs are still
+> fully documented in the wave journals and PLAYBOOK_WAVE3, so rebuild is cheap.)
+
 Protocol for whoever (human or agent) picks this up: read docs/PLAYBOOK.md then
 docs/PLAYBOOK_WAVE3.md first (the Finisher-wave levers section especially). Work targets
 IN ORDER. Per target: verify the prior baseline diff first, attack only the diagnosed gap,
