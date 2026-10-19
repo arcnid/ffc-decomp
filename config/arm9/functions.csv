@@ -1,0 +1,1041 @@
+module,address,symbol,source,isa,opt,body_bytes,status,masked_bytes,call_targets
+arm9,02005968,arm9_02005968,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0206927C
+arm9,02005974,arm9_02005974,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,0206927C 02056844
+arm9,02005D6C,arm9_02005D6C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02005D78,arm9_02005D78,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02005F6C,Arm9_02005F6C,src/arm9/core_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,02005F78,Arm9_02005F78,src/arm9/core_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,02005FC8,Arm9_02005FC8,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02005FD0,Arm9_02005FD0,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02005FD4,Arm9_02005FD4,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02005FD8,Arm9_02005FD8,src/arm9/core_leaves.c,thumb,O4,20,exact_body_match,0,
+arm9,0200604C,Arm9_0200604C,src/arm9/core_leaves.c,thumb,O4,20,exact_body_match,0,
+arm9,02006060,arm9_02006060,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02006080
+arm9,02006080,Arm9_02006080,src/arm9/core_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,0200608C,Arm9_0200608C,src/arm9/core_leaves.c,thumb,O4,26,exact_body_match,0,
+arm9,02006840,Arm9_02006840,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02006D80,arm9_02006D80,src/arm9/calls/wrappers_0.c,thumb,O4p,24,relocation_masked_match,12,02006DC8 02007048 020799F4
+arm9,02006D98,arm9_02006D98,src/arm9/calls/wrappers_0.c,thumb,O4p,24,relocation_masked_match,12,02006DC8 02007048 020799F4
+arm9,02006DB0,arm9_02006DB0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020799FC
+arm9,02006DBC,arm9_02006DBC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020799FC
+arm9,02006DC8,Arm9_02006DC8,src/arm9/typed_leaves.c,thumb,O4p,10,exact_body_match,0,
+arm9,02006DD4,Arm9_02006DD4,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02007018,Arm9_02007018,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02007020,Arm9_02007020,src/arm9/typed_leaves.c,thumb,O4p,14,exact_body_match,0,
+arm9,0200712C,arm9_0200712C,src/arm9/calls/wrappers_1.c,thumb,O4p,18,relocation_masked_match,8,02006D98 020071D4
+arm9,020071F4,Arm9_020071F4,src/arm9/core_leaves.c,thumb,O4,32,exact_body_match,0,
+arm9,02007214,Arm9_02007214,src/arm9/alternate_leaves.c,thumb,O4p,54,exact_body_match,0,
+arm9,02007838,Arm9_02007838,src/arm9/core_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,020078A4,arm9_020078A4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020078BC
+arm9,020078B0,arm9_020078B0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0207B8D4
+arm9,020079F4,Arm9_020079F4,src/arm9/core_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,02007A00,Arm9_02007A00,src/arm9/core_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,02008374,arm9_02008374,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02008384
+arm9,02008400,Arm9_02008400,src/arm9/core_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,020084B8,Arm9_020084B8,src/arm9/typed_leaves.c,thumb,O4p,14,exact_body_match,0,
+arm9,02008D0C,arm9_02008D0C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02008D18,arm9_02008D18,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02008D2C,arm9_02008D2C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02008D38,arm9_02008D38,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02008D4C,arm9_02008D4C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02008D58,arm9_02008D58,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02009A30,arm9_02009A30,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,0206AD5C 02056844
+arm9,02009B2C,arm9_02009B2C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02009E2C,Arm9_02009E2C,src/arm9/virtual_dispatch.c,thumb,O4p,10,exact_body_match,0,
+arm9,0200AA78,arm9_0200AA78,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,020059CC 02056DB0
+arm9,0200AA8C,arm9_0200AA8C,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,020059CC 02056DB0 02056844
+arm9,0200AAAC,arm9_0200AAAC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0200AB6C,arm9_0200AB6C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0200B630
+arm9,0200B360,arm9_0200B360,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,020059CC
+arm9,0200B994,Arm9_0200B994,src/arm9/core_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0200B9A0,Arm9_0200B9A0,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,0200B9AC,Arm9_0200B9AC,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,0200BA88,Arm9_0200BA88,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0200BA90,Arm9_0200BA90,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0200C65C,Arm9_0200C65C,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0200C664,Arm9_0200C664,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0200C68C,Arm9_0200C68C,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0200C810,Arm9_0200C810,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0200C818,Arm9_0200C818,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0200CCF4,arm9_0200CCF4,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,0200A678 02056DB0 02056844
+arm9,0200CD14,arm9_0200CD14,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0200A678 02056DB0
+arm9,0200CFA4,arm9_0200CFA4,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0200A678 02056DB0
+arm9,0200CFB8,arm9_0200CFB8,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,0200A678 02056DB0 02056844
+arm9,0200CFD8,arm9_0200CFD8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0200D3C0,arm9_0200D3C0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0200D3CC,arm9_0200D3CC,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0200D3E0,arm9_0200D3E0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0200D3EC,arm9_0200D3EC,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0200D400,arm9_0200D400,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,0204F45C 02056DB0 02056844
+arm9,0200D41C,arm9_0200D41C,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0204F45C 02056DB0
+arm9,0200D430,arm9_0200D430,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,0204F45C 02056DB0 02056844
+arm9,0200D44C,arm9_0200D44C,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0204F45C 02056DB0
+arm9,0200D750,arm9_0200D750,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,0200D794
+arm9,0200D7B0,arm9_0200D7B0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0200D5EC
+arm9,0200D878,arm9_0200D878,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0200D5EC 020641A4
+arm9,0200D88C,arm9_0200D88C,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,0200D5EC 020641A4 02056844
+arm9,020136A8,arm9_020136A8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020136BC,arm9_020136BC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020136CC,arm9_020136CC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020136DC,arm9_020136DC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020136EC,arm9_020136EC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020136FC,arm9_020136FC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0201370C,arm9_0201370C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0201371C,arm9_0201371C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013728,arm9_02013728,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,02035FD0
+arm9,02013738,arm9_02013738,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,02035FD0 02056844
+arm9,02013750,arm9_02013750,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0201375C,arm9_0201375C,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,02035FD0
+arm9,0201376C,arm9_0201376C,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,02035FD0 02056844
+arm9,02013784,arm9_02013784,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013794,arm9_02013794,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020137A4,arm9_020137A4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020137B4,arm9_020137B4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020137C4,arm9_020137C4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020137D4,arm9_020137D4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020137E4,arm9_020137E4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020137F4,arm9_020137F4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013804,arm9_02013804,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013814,arm9_02013814,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013824,arm9_02013824,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013834,arm9_02013834,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013844,arm9_02013844,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013854,arm9_02013854,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013864,arm9_02013864,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013874,arm9_02013874,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013884,arm9_02013884,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013894,arm9_02013894,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020138A4,arm9_020138A4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020138B4,arm9_020138B4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020138C4,arm9_020138C4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020138D4,arm9_020138D4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020138E4,arm9_020138E4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020138F4,arm9_020138F4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013904,arm9_02013904,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013914,arm9_02013914,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013924,arm9_02013924,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013934,arm9_02013934,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013940,arm9_02013940,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,02035FD0
+arm9,02013950,arm9_02013950,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,02035FD0 02056844
+arm9,02013968,arm9_02013968,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013978,arm9_02013978,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013988,arm9_02013988,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020139BC,arm9_020139BC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020139CC,arm9_020139CC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013A24,arm9_02013A24,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013A34,arm9_02013A34,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013A44,arm9_02013A44,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013A78,arm9_02013A78,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013A88,arm9_02013A88,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013A98,arm9_02013A98,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013AA8,arm9_02013AA8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013AB8,arm9_02013AB8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013AC8,arm9_02013AC8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013AD8,arm9_02013AD8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013AE8,arm9_02013AE8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013AF8,arm9_02013AF8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013B08,arm9_02013B08,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013B18,arm9_02013B18,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013B28,arm9_02013B28,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013B38,arm9_02013B38,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013B48,arm9_02013B48,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013B58,arm9_02013B58,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013B68,arm9_02013B68,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013B78,arm9_02013B78,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013B88,arm9_02013B88,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013B98,arm9_02013B98,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013BE0,arm9_02013BE0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013BF0,arm9_02013BF0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013C00,arm9_02013C00,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013C10,arm9_02013C10,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013C20,arm9_02013C20,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013C30,arm9_02013C30,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013C40,arm9_02013C40,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013C50,arm9_02013C50,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013C60,arm9_02013C60,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013C70,arm9_02013C70,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013C80,arm9_02013C80,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013C90,arm9_02013C90,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013CA0,arm9_02013CA0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013CB0,arm9_02013CB0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013CC0,arm9_02013CC0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013CD0,arm9_02013CD0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013CE0,arm9_02013CE0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013CF0,arm9_02013CF0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013D00,arm9_02013D00,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013D10,arm9_02013D10,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013D20,arm9_02013D20,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013D30,arm9_02013D30,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013D40,arm9_02013D40,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013D50,arm9_02013D50,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013D60,arm9_02013D60,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013D70,arm9_02013D70,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013D80,arm9_02013D80,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013D90,arm9_02013D90,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013DA0,arm9_02013DA0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013DB0,arm9_02013DB0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013DC0,arm9_02013DC0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013DD0,arm9_02013DD0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013DE0,arm9_02013DE0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013DF0,arm9_02013DF0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013E00,arm9_02013E00,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013E10,arm9_02013E10,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013E20,arm9_02013E20,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013E30,arm9_02013E30,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013E40,arm9_02013E40,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013E50,arm9_02013E50,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013E60,arm9_02013E60,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013E70,arm9_02013E70,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013E80,arm9_02013E80,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013E90,arm9_02013E90,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013EA0,arm9_02013EA0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013EB0,arm9_02013EB0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013EC0,arm9_02013EC0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013ED0,arm9_02013ED0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013EE0,arm9_02013EE0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013EF0,arm9_02013EF0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013F00,arm9_02013F00,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013F10,arm9_02013F10,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013F20,arm9_02013F20,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013F30,arm9_02013F30,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013F40,arm9_02013F40,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013F50,arm9_02013F50,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013F60,arm9_02013F60,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013F70,arm9_02013F70,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013F80,arm9_02013F80,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013F90,arm9_02013F90,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013FA0,arm9_02013FA0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013FB0,arm9_02013FB0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013FC0,arm9_02013FC0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013FD0,arm9_02013FD0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013FE0,arm9_02013FE0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02013FF0,arm9_02013FF0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014000,arm9_02014000,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014010,arm9_02014010,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014020,arm9_02014020,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014030,arm9_02014030,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014040,arm9_02014040,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014050,arm9_02014050,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014060,arm9_02014060,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014070,arm9_02014070,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014080,arm9_02014080,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014090,arm9_02014090,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020140A0,arm9_020140A0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020140B0,arm9_020140B0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020140C0,arm9_020140C0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020140D0,arm9_020140D0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020140E0,arm9_020140E0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020140F0,arm9_020140F0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014100,arm9_02014100,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014110,arm9_02014110,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014120,arm9_02014120,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014130,arm9_02014130,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014140,arm9_02014140,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020141A0,arm9_020141A0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020141B0,arm9_020141B0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020141C0,arm9_020141C0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020141D0,arm9_020141D0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020141E0,arm9_020141E0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020141F0,arm9_020141F0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014200,arm9_02014200,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014210,arm9_02014210,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014220,arm9_02014220,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014230,arm9_02014230,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014240,arm9_02014240,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014250,arm9_02014250,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014260,arm9_02014260,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014270,arm9_02014270,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014280,arm9_02014280,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014290,arm9_02014290,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020142A0,arm9_020142A0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020142B0,arm9_020142B0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020142C0,arm9_020142C0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020142D0,arm9_020142D0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020142E0,arm9_020142E0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020142F0,arm9_020142F0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014300,arm9_02014300,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014310,arm9_02014310,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014320,arm9_02014320,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014330,arm9_02014330,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014340,arm9_02014340,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014350,arm9_02014350,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014360,arm9_02014360,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014370,arm9_02014370,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014380,arm9_02014380,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02014400,arm9_02014400,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02019E04,Arm9_02019E04,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02019E68,Arm9_02019E68,src/arm9/core_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,0201A1C4,arm9_0201A1C4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0201A1D0
+arm9,0201A23C,Arm9_0201A23C,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0201A240,Arm9_0201A240,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,0201A39C,Arm9_0201A39C,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0201B778,Arm9_0201B778,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0201B79C,Arm9_0201B79C,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0201B894,Arm9_0201B894,src/arm9/typed_leaves.c,thumb,O4p,10,exact_body_match,0,
+arm9,0201B924,Arm9_0201B924,src/arm9/typed_leaves.c,thumb,O4p,10,exact_body_match,0,
+arm9,0201C210,Arm9_0201C210,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0201C218,Arm9_0201C218,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0201CE20,Arm9_0201CE20,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0201CFF8,Arm9_0201CFF8,src/arm9/alternate_leaves.c,thumb,O4p,28,exact_body_match,0,
+arm9,0201D014,Arm9_0201D014,src/arm9/core_leaves.c,thumb,O4,24,exact_body_match,0,
+arm9,0201D198,Arm9_0201D198,src/arm9/core_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0201D1A4,Arm9_0201D1A4,src/arm9/core_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0201E920,Arm9_0201E920,src/arm9/core_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0201E92C,Arm9_0201E92C,src/arm9/alternate_leaves.c,thumb,O4p,40,exact_body_match,0,
+arm9,0201E954,Arm9_0201E954,src/arm9/alternate_leaves.c,thumb,O4p,40,exact_body_match,0,
+arm9,0201EC94,Arm9_0201EC94,src/arm9/alternate_leaves.c,thumb,O4p,40,exact_body_match,0,
+arm9,0201ECBC,Arm9_0201ECBC,src/arm9/alternate_leaves.c,thumb,O4p,40,exact_body_match,0,
+arm9,0201F738,Arm9_0201F738,src/arm9/alternate_leaves.c,thumb,O4p,40,exact_body_match,0,
+arm9,0201F760,Arm9_0201F760,src/arm9/alternate_leaves.c,thumb,O4p,40,exact_body_match,0,
+arm9,02020000,arm9_02020000,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02054844
+arm9,0202000C,arm9_0202000C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02054844 02056844
+arm9,02020F80,Arm9_02020F80,src/arm9/core_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0202111C,Arm9_0202111C,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,020217C8,arm9_020217C8,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,02054844 02054C90 02056844
+arm9,020217E4,arm9_020217E4,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,02054844 02054C90
+arm9,020217FC,arm9_020217FC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0202180C,arm9_0202180C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0202181C,arm9_0202181C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0202182C,arm9_0202182C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0202183C,arm9_0202183C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0202184C,arm9_0202184C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0202185C,arm9_0202185C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020218BC,arm9_020218BC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056B74
+arm9,02022850,Arm9_02022850,src/arm9/typed_leaves.c,thumb,O4p,22,exact_body_match,0,
+arm9,02022FBC,Arm9_02022FBC,src/arm9/alternate_leaves.c,thumb,O4p,32,exact_body_match,0,
+arm9,02023074,Arm9_02023074,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02023078,Arm9_02023078,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02023080,Arm9_02023080,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,020235A0,arm9_020235A0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020235F4,Arm9_020235F4,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02023E38,Arm9_02023E38,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02023E3C,Arm9_02023E3C,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02023E40,Arm9_02023E40,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02023E48,Arm9_02023E48,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02023E50,Arm9_02023E50,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02023E8C,Arm9_02023E8C,src/arm9/core_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,02023E9C,Arm9_02023E9C,src/arm9/alternate_leaves.c,thumb,O4p,46,exact_body_match,0,
+arm9,02023ECC,Arm9_02023ECC,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02023F10,Arm9_02023F10,src/arm9/alternate_leaves.c,thumb,O4p,46,exact_body_match,0,
+arm9,02023F40,Arm9_02023F40,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02024134,Arm9_02024134,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02024C78,Arm9_02024C78,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02024E74,Arm9_02024E74,src/arm9/alternate_leaves.c,thumb,O4p,60,exact_body_match,0,
+arm9,02025AD8,Arm9_02025AD8,src/arm9/alternate_leaves.c,thumb,O4p,60,exact_body_match,0,
+arm9,02025B14,arm9_02025B14,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02023978
+arm9,02025B20,arm9_02025B20,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02023978 02056844
+arm9,02025BCC,arm9_02025BCC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020274F0
+arm9,020277DC,arm9_020277DC,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,02027880
+arm9,020277EC,arm9_020277EC,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,02027830
+arm9,0202A5E0,Arm9_0202A5E0,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0202A5E4,Arm9_0202A5E4,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0202A5E8,Arm9_0202A5E8,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0202A5EC,Arm9_0202A5EC,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0202A5F0,Arm9_0202A5F0,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0202A5F4,Arm9_0202A5F4,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0202A5FC,Arm9_0202A5FC,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0202A600,Arm9_0202A600,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0202A608,Arm9_0202A608,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0202AD4C,arm9_0202AD4C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0202AD78
+arm9,0202AD58,arm9_0202AD58,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0202AD64
+arm9,0202ADE8,arm9_0202ADE8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0202D0E0
+arm9,0202AFB4,arm9_0202AFB4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020520BC
+arm9,0202B240,Arm9_0202B240,src/arm9/core_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0202B24C,Arm9_0202B24C,src/arm9/core_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0202B258,Arm9_0202B258,src/arm9/core_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,0202B264,Arm9_0202B264,src/arm9/core_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,0202B284,Arm9_0202B284,src/arm9/core_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0202B290,Arm9_0202B290,src/arm9/core_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,0202B2A0,Arm9_0202B2A0,src/arm9/core_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,0202B2B0,Arm9_0202B2B0,src/arm9/core_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,0202B414,Arm9_0202B414,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0202B7CC,Arm9_0202B7CC,src/arm9/core_leaves.c,thumb,O4,48,exact_body_match,0,
+arm9,0202B8AC,Arm9_0202B8AC,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0202C8FC,Arm9_0202C8FC,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0202D0FC,arm9_0202D0FC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0202AE9C
+arm9,0202D108,arm9_0202D108,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,0202AE9C 02056844
+arm9,0202D11C,arm9_0202D11C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0202AE9C
+arm9,0202D128,arm9_0202D128,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,0202AE9C 02056844
+arm9,0202D13C,arm9_0202D13C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0202AE9C
+arm9,0202D148,arm9_0202D148,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,0202AE9C 02056844
+arm9,0202D15C,arm9_0202D15C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0202AE9C
+arm9,0202D168,arm9_0202D168,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,0202AE9C 02056844
+arm9,0202D334,arm9_0202D334,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,0202D378
+arm9,0202D3A4,Arm9_0202D3A4,src/arm9/alternate_leaves.c,thumb,O4p,44,exact_body_match,0,
+arm9,0202DE54,arm9_0202DE54,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0202DE68,arm9_0202DE68,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0202DEF4,Arm9_0202DEF4,src/arm9/core_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0202DFD0,Arm9_0202DFD0,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0202E100,arm9_0202E100,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0202E190,Arm9_0202E190,src/arm9/alternate_leaves.c,thumb,O4p,44,exact_body_match,0,
+arm9,0202E1E4,Arm9_0202E1E4,src/arm9/core_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,0203016C,Arm9_0203016C,src/arm9/core_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,0203127C,arm9_0203127C,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,020312C0
+arm9,02031DD4,Arm9_02031DD4,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02031DE0,Arm9_02031DE0,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02032028,Arm9_02032028,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02032034,Arm9_02032034,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02032350,Arm9_02032350,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02032440,arm9_02032440,src/arm9/calls/wrappers_0.c,thumb,O4p,28,relocation_masked_match,12,0200B630 0200D5EC 020695D0
+arm9,0203245C,arm9_0203245C,src/arm9/calls/wrappers_0.c,thumb,O4p,34,relocation_masked_match,16,0200B630 0200D5EC 020695D0 02056844
+arm9,02032480,arm9_02032480,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0206927C
+arm9,0203248C,arm9_0203248C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,0206927C 02056844
+arm9,020324A0,arm9_020324A0,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,020324B4,arm9_020324B4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,020324C4,arm9_020324C4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02032620,Arm9_02032620,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02032628,Arm9_02032628,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02032630,Arm9_02032630,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02032638,Arm9_02032638,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02033298,arm9_02033298,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,020059CC 02056DB0
+arm9,020332AC,arm9_020332AC,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,020059CC 02056DB0 02056844
+arm9,020332C8,arm9_020332C8,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,020059CC 02056DB0
+arm9,020332DC,arm9_020332DC,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,020059CC 02056DB0 02056844
+arm9,020332F8,arm9_020332F8,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0203330C,arm9_0203330C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02033318,arm9_02033318,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0203332C,arm9_0203332C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02033774,arm9_02033774,src/arm9/calls/wrappers_0.c,thumb,O4p,36,relocation_masked_match,16,020059CC 020059CC 020059CC 02056DB0
+arm9,020338CC,Arm9_020338CC,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02033BE0,arm9_02033BE0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0206927C
+arm9,02033BEC,arm9_02033BEC,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,0206927C 02056844
+arm9,02033C00,arm9_02033C00,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,020059CC 020695D0
+arm9,02033C14,arm9_02033C14,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,020059CC 020695D0 02056844
+arm9,02033E04,Arm9_02033E04,src/arm9/core_leaves.c,thumb,O4,30,exact_body_match,0,
+arm9,02033E24,Arm9_02033E24,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02034014,arm9_02034014,src/arm9/calls/wrappers_0.c,thumb,O4p,28,relocation_masked_match,12,02033E8C 02033E8C 02033E8C
+arm9,020340B8,Arm9_020340B8,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,020340C0,Arm9_020340C0,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,020342CC,arm9_020342CC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020342E4
+arm9,020342D8,arm9_020342D8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020342F4
+arm9,02034E54,Arm9_02034E54,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,020354D8,arm9_020354D8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020354EC,arm9_020354EC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020356C4,arm9_020356C4,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,020520BC 02056844
+arm9,02035984,arm9_02035984,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,02035AFC
+arm9,02035994,arm9_02035994,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,02035AFC 02056844
+arm9,02035B84,arm9_02035B84,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,02035C18
+arm9,02035B94,Arm9_02035B94,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02035B9C,Arm9_02035B9C,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02035BD8,Arm9_02035BD8,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02035BE0,arm9_02035BE0,src/arm9/packed_defaults.c,thumb,O4p,56,exact_body_match,0,
+arm9,02035C18,Arm9_02035C18,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02035C24,Arm9_02035C24,src/arm9/typed_leaves.c,thumb,O4p,8,exact_body_match,0,
+arm9,02035C2C,Arm9_02035C2C,src/arm9/typed_leaves.c,thumb,O4p,8,exact_body_match,0,
+arm9,02035C34,Arm9_02035C34,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02035D6C,Arm9_02035D6C,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02035D70,arm9_02035D70,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02035D7C,Arm9_02035D7C,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02035DAC,Arm9_02035DAC,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02035DCC,Arm9_02035DCC,src/arm9/alternate_leaves.c,thumb,O4p,28,exact_body_match,0,
+arm9,02035E30,arm9_02035E30,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02035D7C
+arm9,02035E3C,arm9_02035E3C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02035D7C 02056844
+arm9,02036360,Arm9_02036360,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02036368,Arm9_02036368,src/arm9/typed_leaves.c,thumb,O4p,8,exact_body_match,0,
+arm9,02036370,Arm9_02036370,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02036378,Arm9_02036378,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02036380,Arm9_02036380,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,020363A4,Arm9_020363A4,src/arm9/typed_leaves.c,thumb,O4p,8,exact_body_match,0,
+arm9,020363AC,Arm9_020363AC,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0203645C,Arm9_0203645C,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02036460,Arm9_02036460,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,020367A8,Arm9_020367A8,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,020367AC,arm9_020367AC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020367B8,Arm9_020367B8,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02036820,Arm9_02036820,src/arm9/core_leaves.c,thumb,O4,24,exact_body_match,0,
+arm9,02036890,Arm9_02036890,src/arm9/core_leaves.c,thumb,O4,28,exact_body_match,0,
+arm9,020368AC,Arm9_020368AC,src/arm9/core_leaves.c,thumb,O4,30,exact_body_match,0,
+arm9,020369C0,Arm9_020369C0,src/arm9/core_leaves.c,thumb,O4,20,exact_body_match,0,
+arm9,02036B4C,Arm9_02036B4C,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02036B74,Arm9_02036B74,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02036B9C,Arm9_02036B9C,src/arm9/core_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,02036C0C,Arm9_02036C0C,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02036C10,Arm9_02036C10,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02036CD0,Arm9_02036CD0,src/arm9/typed_leaves.c,thumb,O4p,8,exact_body_match,0,
+arm9,02036CD8,Arm9_02036CD8,src/arm9/typed_leaves.c,thumb,O4p,8,exact_body_match,0,
+arm9,02036CE0,Arm9_02036CE0,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02036CFC,Arm9_02036CFC,src/arm9/typed_leaves.c,thumb,O4p,18,exact_body_match,0,
+arm9,02036D18,Arm9_02036D18,src/arm9/typed_leaves.c,thumb,O4p,8,exact_body_match,0,
+arm9,02036D20,Arm9_02036D20,src/arm9/typed_leaves.c,thumb,O4p,18,exact_body_match,0,
+arm9,02036D34,Arm9_02036D34,src/arm9/typed_leaves.c,thumb,O4p,18,exact_body_match,0,
+arm9,02036D48,Arm9_02036D48,src/arm9/core_leaves.c,thumb,O4,18,exact_body_match,0,
+arm9,02036D5C,Arm9_02036D5C,src/arm9/typed_leaves.c,thumb,O4p,18,exact_body_match,0,
+arm9,02036D70,Arm9_02036D70,src/arm9/typed_leaves.c,thumb,O4p,8,exact_body_match,0,
+arm9,02036D80,Arm9_02036D80,src/arm9/typed_leaves.c,thumb,O4p,8,exact_body_match,0,
+arm9,02037648,Arm9_02037648,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02039134,arm9_02039134,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02039154,Arm9_02039154,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0203915C,Arm9_0203915C,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02039160,Arm9_02039160,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02039164,Arm9_02039164,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02039168,Arm9_02039168,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0203981C,Arm9_0203981C,src/arm9/core_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,02039DE0,Arm9_02039DE0,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02039EB8,arm9_02039EB8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0203B07C
+arm9,02039EC4,arm9_02039EC4,src/arm9/calls/wrappers_0.c,thumb,O4p,28,relocation_masked_match,12,02035C18 0203B07C 02039738
+arm9,02039EE0,arm9_02039EE0,src/arm9/calls/wrappers_0.c,thumb,O4p,34,relocation_masked_match,16,02035C18 0203B07C 02039738 02056844
+arm9,0203B260,arm9_0203B260,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02039738
+arm9,0203B26C,arm9_0203B26C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02039738 02056844
+arm9,0203B280,arm9_0203B280,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02039738
+arm9,0203B28C,arm9_0203B28C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02039738 02056844
+arm9,0203B2A0,arm9_0203B2A0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02039738
+arm9,0203B2AC,arm9_0203B2AC,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02039738 02056844
+arm9,0203B2C0,arm9_0203B2C0,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,020367A8 02039738
+arm9,0203B2D4,arm9_0203B2D4,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,020367A8 02039738 02056844
+arm9,0203B2F0,arm9_0203B2F0,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,020367A8 02039738
+arm9,0203B304,arm9_0203B304,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,020367A8 02039738 02056844
+arm9,0203B320,arm9_0203B320,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02039738
+arm9,0203B32C,arm9_0203B32C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02039738 02056844
+arm9,0203B340,arm9_0203B340,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0203B34C,arm9_0203B34C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0203C3B0,arm9_0203C3B0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0203C3BC,arm9_0203C3BC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02066748
+arm9,0203C3C8,arm9_0203C3C8,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02066748 02056844
+arm9,0203C3DC,arm9_0203C3DC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0206735C
+arm9,0203C3E8,arm9_0203C3E8,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,0206735C 02056844
+arm9,0203C40C,Arm9_0203C40C,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,0203C410,Arm9_0203C410,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0203C44C,Arm9_0203C44C,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0203D3B4,arm9_0203D3B4,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,0200958C 02056DB0 02056844
+arm9,0203D4FC,arm9_0203D4FC,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0200958C 02056DB0
+arm9,0203D6A0,arm9_0203D6A0,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0200958C 02046F9C
+arm9,0203D6B4,arm9_0203D6B4,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,0200958C 02046F9C 02056844
+arm9,0203F438,arm9_0203F438,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0203F444,arm9_0203F444,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0203F458,arm9_0203F458,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0203F46C,arm9_0203F46C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0203F478,arm9_0203F478,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0203F48C,arm9_0203F48C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0203F498,arm9_0203F498,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0203F4AC,arm9_0203F4AC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0203F4B8,arm9_0203F4B8,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0203F4CC,arm9_0203F4CC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0203F4D8,arm9_0203F4D8,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0203F4EC,arm9_0203F4EC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0203F4F8,arm9_0203F4F8,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0203F50C,arm9_0203F50C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02041C88,arm9_02041C88,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02041C94,arm9_02041C94,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02041CA8,arm9_02041CA8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02041CB4,arm9_02041CB4,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02041CC8,arm9_02041CC8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02041CD4,arm9_02041CD4,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02041CE8,arm9_02041CE8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02046F9C
+arm9,02041CF4,arm9_02041CF4,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02046F9C 02056844
+arm9,02041D08,arm9_02041D08,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02041D14,arm9_02041D14,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02041D28,arm9_02041D28,src/arm9/calls/wrappers_0.c,thumb,O4p,28,relocation_masked_match,12,02035FD0 02035FD0 02056DB0
+arm9,02041D44,arm9_02041D44,src/arm9/calls/wrappers_0.c,thumb,O4p,34,relocation_masked_match,16,02035FD0 02035FD0 02056DB0 02056844
+arm9,020424D4,Arm9_020424D4,src/arm9/core_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,020424E0,Arm9_020424E0,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02042730,Arm9_02042730,src/arm9/alternate_leaves.c,thumb,O4p,60,exact_body_match,0,
+arm9,02042F44,Arm9_02042F44,src/arm9/core_leaves.c,thumb,O4,30,exact_body_match,0,
+arm9,0204442C,arm9_0204442C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02046F9C
+arm9,02044438,arm9_02044438,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02046F9C 02056844
+arm9,0204444C,arm9_0204444C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02044460,arm9_02044460,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0204446C,arm9_0204446C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02044480,arm9_02044480,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02047ED4,arm9_02047ED4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02047EE0,arm9_02047EE0,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02048790,arm9_02048790,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02048BB4,arm9_02048BB4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02048BC0,arm9_02048BC0,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02048BD4,arm9_02048BD4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02048BE0,arm9_02048BE0,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02048BF4,arm9_02048BF4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02048C00,arm9_02048C00,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02048C14,arm9_02048C14,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02048C20,arm9_02048C20,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02048C34,arm9_02048C34,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02048C40,arm9_02048C40,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02048C54,arm9_02048C54,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02046F9C
+arm9,02048C60,arm9_02048C60,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02046F9C 02056844
+arm9,02048C74,arm9_02048C74,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02046F9C
+arm9,02048C80,arm9_02048C80,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02046F9C 02056844
+arm9,02048C94,arm9_02048C94,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02048CA0,arm9_02048CA0,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02048CB4,arm9_02048CB4,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,020059CC 02056DB0
+arm9,02048CC8,arm9_02048CC8,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,020059CC 02056DB0 02056844
+arm9,02048CE4,arm9_02048CE4,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02048CF8,arm9_02048CF8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02048D74,arm9_02048D74,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02048D80,arm9_02048D80,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0204905C,arm9_0204905C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02049068,arm9_02049068,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,020496E8,arm9_020496E8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02049744,arm9_02049744,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02049750,arm9_02049750,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0204A834,arm9_0204A834,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0204A840,arm9_0204A840,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0204A854,arm9_0204A854,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0204A868,arm9_0204A868,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0204A874,arm9_0204A874,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0204A880,arm9_0204A880,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0204B0AC,Arm9_0204B0AC,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0204B0B0,Arm9_0204B0B0,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0204B0B4,Arm9_0204B0B4,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0204B394,Arm9_0204B394,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0204B780,Arm9_0204B780,src/arm9/core_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,0204B7F4,Arm9_0204B7F4,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0204BE88,Arm9_0204BE88,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0204BE90,Arm9_0204BE90,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0204BE98,Arm9_0204BE98,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0204DE70,Arm9_0204DE70,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,0204DE74,Arm9_0204DE74,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0204DE78,Arm9_0204DE78,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0204DE7C,Arm9_0204DE7C,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0204DE80,Arm9_0204DE80,src/arm9/core_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0204DE84,Arm9_0204DE84,src/arm9/core_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0204DEA8,Arm9_0204DEA8,src/arm9/core_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0204DEC4,Arm9_0204DEC4,src/arm9/core_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,0204F078,Arm9_0204F078,src/arm9/framework_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0204F080,Arm9_0204F080,src/arm9/framework_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0204F08C,Arm9_0204F08C,src/arm9/framework_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0204F098,Arm9_0204F098,src/arm9/framework_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0204F0A4,Arm9_0204F0A4,src/arm9/framework_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0204F0B0,Arm9_0204F0B0,src/arm9/framework_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,0204F0BC,Arm9_0204F0BC,src/arm9/framework_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0204F0C4,Arm9_0204F0C4,src/arm9/framework_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0204F0CC,Arm9_0204F0CC,src/arm9/framework_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0204F0D4,Arm9_0204F0D4,src/arm9/framework_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0204F208,Arm9_0204F208,src/arm9/framework_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0204F210,Arm9_0204F210,src/arm9/framework_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0204F218,Arm9_0204F218,src/arm9/framework_leaves.c,thumb,O4,22,exact_body_match,0,
+arm9,0204F3CC,Arm9_0204F3CC,src/arm9/alternate_leaves.c,thumb,O4p,60,exact_body_match,0,
+arm9,0204F548,Arm9_0204F548,src/arm9/framework_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0204F644,Arm9_0204F644,src/arm9/framework_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0204F798,,src/arm9/graphics_accessors.c,thumb,O4,,exact_body_match,0,
+arm9,0204F7A0,,src/arm9/graphics_accessors.c,thumb,O4,,exact_body_match,0,
+arm9,0204F7D4,Arm9_0204F7D4,src/arm9/framework_leaves.c,thumb,O4,22,exact_body_match,0,
+arm9,0204F7EC,Arm9_0204F7EC,src/arm9/framework_leaves.c,thumb,O4,22,exact_body_match,0,
+arm9,0204F854,Arm9_0204F854,src/arm9/framework_leaves.c,thumb,O4,34,exact_body_match,0,
+arm9,0204FA28,arm9_0204FA28,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,02054844 02056844
+arm9,0204FA3C,arm9_0204FA3C,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,02054844
+arm9,0204FB64,Arm9_0204FB64,src/arm9/framework_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0204FB68,Arm9_0204FB68,src/arm9/framework_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0204FB6C,Arm9_0204FB6C,src/arm9/framework_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0204FCB0,arm9_0204FCB0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02059BD0
+arm9,0204FCBC,arm9_0204FCBC,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02059BD0 02056844
+arm9,020509A4,arm9_020509A4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020509B4,arm9_020509B4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02050C44,arm9_02050C44,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,02050C28
+arm9,02050C54,arm9_02050C54,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,02050C28 02056844
+arm9,02050DCC,arm9_02050DCC,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,02050E10
+arm9,02051870,Arm9_02051870,src/arm9/alternate_leaves.c,thumb,O4p,60,exact_body_match,0,
+arm9,020518AC,arm9_020518AC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020518B8
+arm9,02051ACC,arm9_02051ACC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020059CC
+arm9,020526AC,Arm9_020526AC,src/arm9/framework_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02052884,arm9_02052884,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02052890
+arm9,02052D90,Arm9_02052D90,src/arm9/framework_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02053234,Arm9_02053234,src/arm9/framework_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,020534B4,arm9_020534B4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020534C0
+arm9,02053754,Arm9_02053754,src/arm9/framework_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02053758,Arm9_02053758,src/arm9/framework_leaves.c,thumb,O4,24,exact_body_match,0,
+arm9,02053C80,Arm9_02053C80,src/arm9/framework_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,02053F00,arm9_02053F00,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,02053F44
+arm9,02054324,arm9_02054324,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,02057A70 02054844
+arm9,02054338,arm9_02054338,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,02057A70 02054844 02056844
+arm9,02054618,arm9_02054618,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02054844
+arm9,02054624,arm9_02054624,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02054844 02056844
+arm9,02055050,Arm9_02055050,src/arm9/framework_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02055054,Arm9_02055054,src/arm9/framework_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02055058,Arm9_02055058,src/arm9/framework_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02055068,Arm9_02055068,src/arm9/framework_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02055194,Arm9_02055194,src/arm9/framework_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02055328,arm9_02055328,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,02054844 02056844
+arm9,0205533C,arm9_0205533C,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,02054844
+arm9,02055350,arm9_02055350,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02055360,arm9_02055360,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02055370,arm9_02055370,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02055380,arm9_02055380,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020565E4,arm9_020565E4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020565F4,arm9_020565F4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056604,arm9_02056604,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056614,arm9_02056614,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056624,arm9_02056624,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056634,arm9_02056634,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056644,arm9_02056644,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056654,arm9_02056654,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056664,arm9_02056664,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056674,arm9_02056674,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056684,arm9_02056684,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056694,arm9_02056694,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020566A4,arm9_020566A4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020566B4,arm9_020566B4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020566C4,arm9_020566C4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020566D4,arm9_020566D4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020566E4,arm9_020566E4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020566F4,arm9_020566F4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056704,arm9_02056704,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056714,arm9_02056714,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056724,arm9_02056724,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056734,arm9_02056734,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056744,arm9_02056744,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056754,arm9_02056754,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056764,arm9_02056764,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056774,arm9_02056774,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056784,arm9_02056784,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056794,arm9_02056794,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020567A4,arm9_020567A4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020567B4,arm9_020567B4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020567C4,arm9_020567C4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020567D4,arm9_020567D4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020567E4,arm9_020567E4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020567F4,arm9_020567F4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056804,arm9_02056804,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056810,arm9_02056810,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0200D5EC
+arm9,02056894,Arm9_02056894,src/arm9/framework_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02056A88,arm9_02056A88,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056A98,arm9_02056A98,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056D70,arm9_02056D70,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056B74
+arm9,02056D7C,arm9_02056D7C,src/arm9/calls/wrappers_0.c,thumb,O4p,22,relocation_masked_match,8,02056B74 02056B74
+arm9,02056D94,arm9_02056D94,src/arm9/calls/wrappers_0.c,thumb,O4p,28,relocation_masked_match,12,02056B74 02056B74 02056844
+arm9,02056DB0,arm9_02056DB0,src/arm9/calls/wrappers_1.c,thumb,O4p,22,relocation_masked_match,8,02056B74 02056B74
+arm9,02056DD4,Arm9_02056DD4,src/arm9/framework_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02056E50,arm9_02056E50,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056B74 02056844
+arm9,02056E64,arm9_02056E64,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056B74 02056844
+arm9,02056E7C,arm9_02056E7C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056E8C,arm9_02056E8C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056E9C,arm9_02056E9C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056EAC,arm9_02056EAC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056EBC,arm9_02056EBC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056F7C,arm9_02056F7C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02056F88,Arm9_02056F88,src/arm9/framework_leaves.c,thumb,O4,18,exact_body_match,0,
+arm9,02057190,Arm9_02057190,src/arm9/framework_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,020575D4,arm9_020575D4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020575E4,arm9_020575E4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020575F4,arm9_020575F4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02057604,arm9_02057604,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02057614,arm9_02057614,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020576C8,Arm9_020576C8,src/arm9/framework_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,02057DAC,Arm9_02057DAC,src/arm9/framework_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02058194,Arm9_02058194,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02058560,Arm9_02058560,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02058ED0,arm9_02058ED0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205902C,arm9_0205902C,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,02059070
+arm9,0205947C,Arm9_0205947C,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,020595A8,arm9_020595A8,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02059BD0 02056844
+arm9,02059714,arm9_02059714,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02059BD0 02056844
+arm9,02059854,arm9_02059854,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02059BD0 02056844
+arm9,02059AD8,arm9_02059AD8,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02057D44 02056844
+arm9,02059C48,Arm9_02059C48,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02059D28,arm9_02059D28,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02059D38,arm9_02059D38,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02059D48,arm9_02059D48,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205A0B4,arm9_0205A0B4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02059BD0
+arm9,0205AE44,arm9_0205AE44,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205AE54,arm9_0205AE54,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205B060,arm9_0205B060,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0205BC04
+arm9,0205C54C,arm9_0205C54C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205CBCC,Arm9_0205CBCC,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0205CE20,arm9_0205CE20,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02059BD0
+arm9,0205CE2C,arm9_0205CE2C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02059BD0 02056844
+arm9,0205CE44,arm9_0205CE44,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205CE54,arm9_0205CE54,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205CE64,arm9_0205CE64,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205CF38,arm9_0205CF38,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02059BD0
+arm9,0205D4DC,arm9_0205D4DC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02059BD0
+arm9,0205D4EC,arm9_0205D4EC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205D4FC,arm9_0205D4FC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205E7AC,Arm9_0205E7AC,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0205ED8C,arm9_0205ED8C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205F1E4,arm9_0205F1E4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205F1F4,arm9_0205F1F4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205F204,arm9_0205F204,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205F818,Arm9_0205F818,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0205F944,arm9_0205F944,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205F954,arm9_0205F954,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0205FD94,arm9_0205FD94,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02057D44
+arm9,0205FDA4,arm9_0205FDA4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0206042C,arm9_0206042C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0206043C,arm9_0206043C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02060448,Arm9_02060448,src/arm9/sdk_leaves.c,thumb,O4,16,exact_body_match,0,
+arm9,02060564,Arm9_02060564,src/arm9/sdk_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0206056C,Arm9_0206056C,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02060A18,arm9_02060A18,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02060A28,arm9_02060A28,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02060A38,arm9_02060A38,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02060A48,arm9_02060A48,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02060AE8,Arm9_02060AE8,src/arm9/alternate_leaves.c,thumb,O4p,22,exact_body_match,0,
+arm9,02060C24,Arm9_02060C24,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02060C28,Arm9_02060C28,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02060C2C,Arm9_02060C2C,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02060E10,arm9_02060E10,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02060E20,arm9_02060E20,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02060E30,arm9_02060E30,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02060E40,arm9_02060E40,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02060E50,arm9_02060E50,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02060E60,arm9_02060E60,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02060E80,Arm9_02060E80,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02060E9C,Arm9_02060E9C,src/arm9/sdk_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,020612F8,arm9_020612F8,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02061308,arm9_02061308,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0206132C,arm9_0206132C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02061338,Arm9_02061338,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,0206133C,Arm9_0206133C,src/arm9/sdk_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02061360,Arm9_02061360,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02061364,Arm9_02061364,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02061368,Arm9_02061368,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0206136C,Arm9_0206136C,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02061370,Arm9_02061370,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02061374,Arm9_02061374,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02061568,Arm9_02061568,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02061D84,arm9_02061D84,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02061338
+arm9,02061D90,arm9_02061D90,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02061338 02056844
+arm9,02061DA4,arm9_02061DA4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02061338
+arm9,02061DB0,arm9_02061DB0,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02061338 02056844
+arm9,02061DC4,arm9_02061DC4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02061338
+arm9,02061DD0,arm9_02061DD0,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02061338 02056844
+arm9,0206282C,arm9_0206282C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0206283C,arm9_0206283C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0206285C,arm9_0206285C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02062868,Arm9_02062868,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02062B94,Arm9_02062B94,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02062BA0,Arm9_02062BA0,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02062BD0,arm9_02062BD0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02062868
+arm9,02062BDC,arm9_02062BDC,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02062868 02056844
+arm9,02062BF4,arm9_02062BF4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02062C04,arm9_02062C04,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02062C14,arm9_02062C14,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02062C24,arm9_02062C24,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02062C34,arm9_02062C34,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02062C44,arm9_02062C44,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02063BC8,Arm9_02063BC8,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02063BCC,Arm9_02063BCC,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02064AA8,Arm9_02064AA8,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02064AAC,Arm9_02064AAC,src/arm9/sdk_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02064B38,Arm9_02064B38,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02064F84,Arm9_02064F84,src/arm9/alternate_leaves.c,thumb,O4p,16,exact_body_match,0,
+arm9,02065900,arm9_02065900,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02065910,arm9_02065910,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02065D08,arm9_02065D08,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020534C0
+arm9,02065DC8,Arm9_02065DC8,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02065DE0,Arm9_02065DE0,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02065F70,arm9_02065F70,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02062868 02056844
+arm9,02065F84,arm9_02065F84,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02062868
+arm9,020660E0,arm9_020660E0,src/arm9/calls/wrappers_1.c,thumb,O4p,12,relocation_masked_match,4,02065F84
+arm9,020660EC,arm9_020660EC,src/arm9/calls/wrappers_1.c,thumb,O4p,18,relocation_masked_match,8,02065F84 02056844
+arm9,02066878,Arm9_02066878,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02067490,Arm9_02067490,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02068004,arm9_02068004,src/arm9/calls/wrappers_1.c,thumb,O4p,12,relocation_masked_match,4,02065F84
+arm9,02068010,arm9_02068010,src/arm9/calls/wrappers_1.c,thumb,O4p,18,relocation_masked_match,8,02065F84 02056844
+arm9,02068028,arm9_02068028,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02068324,arm9_02068324,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,020683C8
+arm9,02068334,arm9_02068334,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,02068378
+arm9,02068610,Arm9_02068610,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,0206861C,Arm9_0206861C,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02068628,Arm9_02068628,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02068634,Arm9_02068634,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02068640,Arm9_02068640,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,0206864C,Arm9_0206864C,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,020686CC,Arm9_020686CC,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02068D94,Arm9_02068D94,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02068DA0,Arm9_02068DA0,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02068DAC,Arm9_02068DAC,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02068DB8,Arm9_02068DB8,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02068DC4,Arm9_02068DC4,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,02068DD0,Arm9_02068DD0,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,020691B0,arm9_020691B0,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,020691F4
+arm9,0206925C,arm9_0206925C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02069268,arm9_02069268,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206927C,arm9_0206927C,src/arm9/calls/wrappers_2.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02069320,Arm9_02069320,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0206940C,Arm9_0206940C,src/arm9/sdk_leaves.c,thumb,O4,36,exact_body_match,0,
+arm9,020695A0,arm9_020695A0,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0206A654 02056DB0
+arm9,020695B4,arm9_020695B4,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,0206A654 02056DB0 02056844
+arm9,020695D0,arm9_020695D0,src/arm9/calls/wrappers_2.c,thumb,O4p,20,relocation_masked_match,8,0206A654 02056DB0
+arm9,020695E4,Arm9_020695E4,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,020696E0,Arm9_020696E0,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,020696E8,Arm9_020696E8,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0206A6C8,Arm9_0206A6C8,src/arm9/alternate_leaves.c,thumb,O4p,60,exact_body_match,0,
+arm9,0206A708,arm9_0206A708,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0206ADD8,Arm9_0206ADD8,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0206BD38,arm9_0206BD38,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0206AD5C
+arm9,0206BD48,arm9_0206BD48,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0206BF50,arm9_0206BF50,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0206C040
+arm9,0206C1BC,arm9_0206C1BC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0206C1DC,arm9_0206C1DC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0206C22C
+arm9,0206EA6C,Arm9_0206EA6C,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0206EA94,Arm9_0206EA94,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,0206EAA0,Arm9_0206EAA0,src/arm9/virtual_dispatch.c,thumb,O4p,12,exact_body_match,0,
+arm9,0206F430,arm9_0206F430,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0206E9BC
+arm9,0206F43C,arm9_0206F43C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,0206E9BC 02056844
+arm9,0206F450,arm9_0206F450,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0206F45C,arm9_0206F45C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206F474,arm9_0206F474,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0206F484,arm9_0206F484,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0206F490,arm9_0206F490,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0206F49C,arm9_0206F49C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206F4B0,arm9_0206F4B0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0206F4BC,arm9_0206F4BC,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206F4D0,arm9_0206F4D0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0206F4DC,arm9_0206F4DC,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206F4F4,arm9_0206F4F4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0206F500,arm9_0206F500,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0206F50C,arm9_0206F50C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206F520,arm9_0206F520,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0206F52C,arm9_0206F52C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206F540,arm9_0206F540,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0206F54C,arm9_0206F54C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206F560,arm9_0206F560,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0206F56C,arm9_0206F56C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206F580,arm9_0206F580,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0206F58C,arm9_0206F58C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206F5A0,arm9_0206F5A0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0206F5AC,arm9_0206F5AC,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206F5C0,arm9_0206F5C0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,0206F5CC,arm9_0206F5CC,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0206F898,arm9_0206F898,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,0206F93C
+arm9,0206F8A8,arm9_0206F8A8,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,0206F8EC
+arm9,0206FC10,Arm9_0206FC10,src/arm9/sdk_leaves.c,thumb,O4,20,exact_body_match,0,
+arm9,02070910,arm9_02070910,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0207091C,arm9_0207091C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02070928,arm9_02070928,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0207093C,arm9_0207093C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02070948,arm9_02070948,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02070A40,Arm9_02070A40,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0207116C,Arm9_0207116C,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,020711A0,Arm9_020711A0,src/arm9/sdk_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,020711AC,Arm9_020711AC,src/arm9/sdk_leaves.c,thumb,O4,22,exact_body_match,0,
+arm9,02071478,arm9_02071478,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02070AD0
+arm9,02071484,arm9_02071484,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02070AD0 02056844
+arm9,02071498,arm9_02071498,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02070AD0
+arm9,020714A4,arm9_020714A4,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02070AD0 02056844
+arm9,0207196C,arm9_0207196C,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,02071AA8
+arm9,020719B4,arm9_020719B4,src/arm9/calls/wrappers_0.c,thumb,O4p,16,relocation_masked_match,4,020719F8
+arm9,02071EC4,Arm9_02071EC4,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02071EC8,Arm9_02071EC8,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02072234,Arm9_02072234,src/arm9/sdk_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0207223C,Arm9_0207223C,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0207309C,Arm9_0207309C,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,020730A0,Arm9_020730A0,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,020735D4,Arm9_020735D4,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02073868,Arm9_02073868,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02073898,Arm9_02073898,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,020738A0,Arm9_020738A0,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02073C44,Arm9_02073C44,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,020744CC,Arm9_020744CC,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,020744D4,Arm9_020744D4,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,020744D8,Arm9_020744D8,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,020747B4,arm9_020747B4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020747C4,arm9_020747C4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020747D4,arm9_020747D4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020747E4,arm9_020747E4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020747F4,arm9_020747F4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02074804,arm9_02074804,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02074814,arm9_02074814,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02074824,arm9_02074824,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02074834,arm9_02074834,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02074844,arm9_02074844,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02074850,arm9_02074850,src/arm9/calls/wrappers_0.c,thumb,O4p,22,relocation_masked_match,8,020059CC 020059CC
+arm9,02074868,arm9_02074868,src/arm9/calls/wrappers_0.c,thumb,O4p,28,relocation_masked_match,12,020059CC 020059CC 02056844
+arm9,02074888,arm9_02074888,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02074898,arm9_02074898,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,020748A4,arm9_020748A4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,020748B0,arm9_020748B0,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,020748C4,arm9_020748C4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,020748D0,arm9_020748D0,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,020748E4,arm9_020748E4,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0204FA14
+arm9,02075A88,Arm9_02075A88,src/arm9/sdk_leaves.c,thumb,O4,16,exact_body_match,0,
+arm9,02075AD0,Arm9_02075AD0,src/arm9/sdk_leaves.c,thumb,O4,18,exact_body_match,0,
+arm9,0207607C,arm9_0207607C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02076088,arm9_02076088,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0207609C,arm9_0207609C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,020760A8,arm9_020760A8,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02077300,Arm9_02077300,src/arm9/sdk_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,0207792C,arm9_0207792C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02077938,arm9_02077938,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0207794C,arm9_0207794C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02077958,arm9_02077958,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0207796C,arm9_0207796C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02077978,arm9_02077978,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,0207798C,arm9_0207798C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02077998,arm9_02077998,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,020779AC,arm9_020779AC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,020779B8,arm9_020779B8,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,020779CC,arm9_020779CC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,020779D8,arm9_020779D8,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,020779EC,arm9_020779EC,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,020059CC 02056DB0
+arm9,02077A00,arm9_02077A00,src/arm9/calls/wrappers_0.c,thumb,O4p,26,relocation_masked_match,12,020059CC 02056DB0 02056844
+arm9,02077A1C,arm9_02077A1C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02077A28,arm9_02077A28,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02077A3C,arm9_02077A3C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02077A48,arm9_02077A48,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02077A5C,arm9_02077A5C,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02056DB0 02056844
+arm9,02077A70,arm9_02077A70,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056DB0
+arm9,02077A7C,Arm9_02077A7C,src/arm9/sdk_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,02077B70,Arm9_02077B70,src/arm9/sdk_leaves.c,thumb,O4,16,exact_body_match,0,
+arm9,02077B80,Arm9_02077B80,src/arm9/sdk_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,020799F4,Arm9_020799F4,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0207B8CC,Arm9_0207B8CC,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,0207B8D4,Arm9_0207B8D4,src/arm9/sdk_leaves.c,thumb,O4,18,exact_body_match,0,
+arm9,0207C908,Arm9_0207C908,src/arm9/sdk_leaves.c,thumb,O4,12,exact_body_match,0,
+arm9,0207F8A0,Arm9_0207F8A0,src/arm9/sdk_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,0207F8B0,Arm9_0207F8B0,src/arm9/sdk_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,0207FC08,Arm9_0207FC08,src/arm9/sdk_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0207FC10,Arm9_0207FC10,src/arm9/sdk_leaves.c,thumb,O4,16,exact_body_match,0,
+arm9,0207FC20,Arm9_0207FC20,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0207FC24,Arm9_0207FC24,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0207FD2C,Arm9_0207FD2C,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,02086A48,Arm9_02086A48,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,020871D4,Arm9_020871D4,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,020872D0,Arm9_020872D0,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02087498,Arm9_02087498,src/arm9/sdk_leaves.c,thumb,O4,20,exact_body_match,0,
+arm9,020877F4,Arm9_020877F4,src/arm9/sdk_leaves.c,thumb,O4,32,exact_body_match,0,
+arm9,02087C24,Arm9_02087C24,src/arm9/sdk_leaves.c,thumb,O4,26,exact_body_match,0,
+arm9,020883E4,Arm9_020883E4,src/arm9/sdk_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02088708,Arm9_02088708,src/arm9/sdk_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,02088FA0,Arm9_02088FA0,src/arm9/sdk_leaves.c,thumb,O4,10,exact_body_match,0,
+arm9,020898B8,Arm9_020898B8,src/arm9/alternate_leaves.c,thumb,O4p,24,exact_body_match,0,
+arm9,0208A658,Arm9_0208A658,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0208C534,Arm9_0208C534,src/arm9/sdk_leaves.c,thumb,O4,24,exact_body_match,0,
+arm9,0208F68C,Arm9_0208F68C,src/arm9/sdk_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0208F694,Arm9_0208F694,src/arm9/sdk_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0208F69C,Arm9_0208F69C,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,0208F6A0,Arm9_0208F6A0,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,020902E8,Arm9_020902E8,src/arm9/sdk_leaves.c,thumb,O4,40,exact_body_match,0,
+arm9,02090310,Arm9_02090310,src/arm9/sdk_leaves.c,thumb,O4,14,exact_body_match,0,
+arm9,020903CC,arm9_020903CC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02090448
+arm9,020927B8,Arm9_020927B8,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,02092864,Arm9_02092864,src/arm9/sdk_leaves.c,thumb,O4,18,exact_body_match,0,
+arm9,020970FC,arm9_020970FC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02097168,arm9_02097168,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,020970C0
+arm9,02097174,arm9_02097174,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,020970C0
+arm9,02097294,arm9_02097294,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,020970C0 02056844
+arm9,0209745C,arm9_0209745C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02097DB0
+arm9,020974DC,arm9_020974DC,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,0209720C
+arm9,020974EC,arm9_020974EC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0209720C
+arm9,020974F8,arm9_020974F8,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,0209720C
+arm9,02097674,arm9_02097674,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02097B0C
+arm9,020976F4,arm9_020976F4,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,0209720C
+arm9,02097704,arm9_02097704,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0209720C
+arm9,02097710,arm9_02097710,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,0209720C
+arm9,020977FC,Arm9_020977FC,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02097894,Arm9_02097894,src/arm9/sdk_leaves.c,thumb,O4,6,exact_body_match,0,
+arm9,02097A10,Arm9_02097A10,src/arm9/sdk_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,02097CC0,Arm9_02097CC0,src/arm9/sdk_leaves.c,thumb,O4,8,exact_body_match,0,
+arm9,0209805C,arm9_0209805C,src/arm9/calls/wrappers_0.c,thumb,O4p,14,relocation_masked_match,4,020970C0
+arm9,0209806C,arm9_0209806C,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,020970C0 02056844
+arm9,020991AC,arm9_020991AC,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0209720C 02056844
+arm9,020991C0,arm9_020991C0,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0209720C 02056844
+arm9,020991D4,arm9_020991D4,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0209720C 02056844
+arm9,020991E8,arm9_020991E8,src/arm9/calls/wrappers_0.c,thumb,O4p,20,relocation_masked_match,8,0209720C 02056844
+arm9,020991FC,arm9_020991FC,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02099208,arm9_02099208,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02097DB0 02056844
+arm9,0209921C,arm9_0209921C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,02099228,arm9_02099228,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,02097B0C 02056844
+arm9,0209BF0C,Arm9_0209BF0C,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,0209BF10,Arm9_0209BF10,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,0209BF14,Arm9_0209BF14,src/arm9/sdk_leaves.c,thumb,O4,4,exact_body_match,0,
+arm9,0209BF18,Arm9_0209BF18,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,0209CB94,Arm9_0209CB94,src/arm9/alternate_leaves.c,thumb,O4p,54,exact_body_match,0,
+arm9,0209CC7C,arm9_0209CC7C,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,02056844
+arm9,0209D090,Arm9_0209D090,src/arm9/sdk_leaves.c,thumb,O4,2,exact_body_match,0,
+arm9,0209D0B0,arm9_0209D0B0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0209D090
+arm9,0209D0BC,arm9_0209D0BC,src/arm9/calls/wrappers_0.c,thumb,O4p,18,relocation_masked_match,8,0209D090 02056844
+arm9,0209D0D0,arm9_0209D0D0,src/arm9/calls/wrappers_0.c,thumb,O4p,12,relocation_masked_match,4,0209D090
+arm9,0209D0DC,arm9_0209D0DC,src/arm9/calls/wrappers_1.c,thumb,O4p,12,relocation_masked_match,4,0209D0D0
+arm9,0209D0E8,arm9_0209D0E8,src/arm9/calls/wrappers_1.c,thumb,O4p,18,relocation_masked_match,8,0209D0D0 02056844
+arm9,0209D0FC,arm9_0209D0FC,src/arm9/calls/wrappers_1.c,thumb,O4p,12,relocation_masked_match,4,0209D0D0
+arm9,0209D108,arm9_0209D108,src/arm9/calls/wrappers_1.c,thumb,O4p,18,relocation_masked_match,8,0209D0D0 02056844
